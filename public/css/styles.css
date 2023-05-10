@@ -1,0 +1,20 @@
+button[aria-pressed="true"] > .fa-heart-o{
+    display: none;
+}
+
+button[aria-pressed="false"] > .fa-heart{
+    display: none;
+}
+
+.fa-heart{
+    color: crimson;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.link-hover:hover {
+    opacity: 0.7;
+}
