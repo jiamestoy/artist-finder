@@ -274,7 +274,7 @@ function createArtistPage(user, reviews, services) {
 
                                             if(user.social_networks != null) {
                                                 for(let socialNetwork of user.social_networks) {
-                                                    html += `<li><a href="${socialNetwork}" class="link-offset-2 link-underline link-underline-opacity-0">Link</a></li>`
+                                                    html += `<li><a href="https://${socialNetwork}" target="_blank" class="link-offset-2 link-underline link-underline-opacity-0">Link</a></li>`
                                                  }
                                             } else {
                                                 html += `<li>Sin redes sociales</li>`
