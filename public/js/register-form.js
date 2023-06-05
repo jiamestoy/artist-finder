@@ -8,7 +8,6 @@ for (let i = 0; i < radios.length; i++) {
     const radio = radios[i];
     if (radio.checked) {
         radio_value = radio.value;
-        form.action = '/api/users';
         radio.classList.add("is-valid");
     } else {
         radio.classList.remove("is-valid");
@@ -17,8 +16,8 @@ for (let i = 0; i < radios.length; i++) {
     radio.addEventListener('click', function(){
         radio_value = radio.value;
         console.log(radio_value);
-        form.action = '/api/users';
-        console.log(form.action);
+        // form.action = '/api/users';
+        // console.log(form.action);
         radio.classList.add("is-valid");
     })
 }

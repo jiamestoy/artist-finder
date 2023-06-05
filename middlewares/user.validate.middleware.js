@@ -7,7 +7,7 @@ async function validateUser(req, res, next){
         next()
     })
     .catch((err)=>{
-        res.status(400).json({error: err})
+        res.status(400).json({error: {message: err}, test: 'Error al validar middleware' })
     })
 }
 

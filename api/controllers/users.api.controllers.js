@@ -8,7 +8,7 @@ async function createUser(req, res) {
         res.redirect("/success")
     })
     .catch((err)=>{
-        res.status(400).json({error: err})
+        res.status(400).json({error: {message: err, test: 'Error del controller'}})
     })
 }
 

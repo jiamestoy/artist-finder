@@ -274,7 +274,7 @@ function createArtistPage(user, reviews, services) {
 
                                             if(user.social_networks != null) {
                                                 for(let socialNetwork of user.social_networks) {
-                                                    html += `<li><a href="${socialNetwork}" class="link-offset-2 link-underline link-underline-opacity-0">Link</a></li>`
+                                                    html += `<li><a href="https://${socialNetwork}" target="_blank" class="link-offset-2 link-underline link-underline-opacity-0">Link</a></li>`
                                                  }
                                             } else {
                                                 html += `<li>Sin redes sociales</li>`
@@ -661,7 +661,7 @@ function createBuyerPage(user) {
 }
 
 function createNewUserPage() {
-    let html = `<div class="container w-50 my-3 p-3 border rounded d-flex flex-column"><h1 class="mb-3 align-self-center">Registrarse</h1><form action="" method="post" enctype="application/x-www-form-urlencoded" class="d-flex flex-column" id="register-form" novalidate><div class="mb-3">
+    let html = `<div class="container w-50 my-3 p-3 border rounded d-flex flex-column"><h1 class="mb-3 align-self-center">Registrarse</h1><form action="/api/users" method="post" enctype="application/x-www-form-urlencoded" class="d-flex flex-column" id="register-form" novalidate><div class="mb-3">
     <label for="username" class="form-label">Nombre de Usuario:</label>
     <input type="text" id="username" name="username" class="form-control" required>
     <div class="invalid-feedback" id="username-feedback"></div>
@@ -681,11 +681,11 @@ function createNewUserPage() {
     <legend class="text-center">¿Quieres ofrecer tus servicios?</legend>
     <div class="d-flex justify-content-center">
         <div class="mx-3">
-            <input type="radio" name="userType" value="artist" class="form-check-input" required>
+            <input type="radio" name="role" value="artist" class="form-check-input" required>
             <label for="userArtist" class="form-check-label">Sí, soy artista</label>
         </div>
         <div class="mx-3">
-            <input type="radio" name="userType" value="buyer" class="form-check-input">
+            <input type="radio" name="role" value="buyer" class="form-check-input">
             <label for="userBuyer" class="form-check-label">No, sólo quiero comprar</label>
         </div>
     </div>

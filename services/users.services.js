@@ -1,4 +1,5 @@
 import { MongoClient, ObjectId } from 'mongodb';
+import bcrypt from 'bcrypt'
 
 const client = new MongoClient('mongodb://127.0.0.1:27017');
 const db = client.db('ARTIST_FINDER');
@@ -28,10 +29,9 @@ async function createUser(user){
 
     const newUser = {...user}
 
-    /*
     const salt = await bcrypt.genSalt(10);
 
-    newUser.password = await bcrypt.hash(user.password, salt);*/
+    newUser.password = await bcrypt.hash(user.password, salt);
 
     await db.collection('users').insertOne(newUser);
 }
