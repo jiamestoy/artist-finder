@@ -1,0 +1,177 @@
+[{
+  "_id": {
+    "$oid": "647502e4a9a76db05641cda9"
+  },
+  "username": "caromartinez91",
+  "first_name": "Carolina",
+  "last_name": "Martinez",
+  "email": "cmartinez@gmail.com",
+  "password": "asdasd",
+  "avatar": "caromartinez91.jpg",
+  "description": "Soy un artista creativo y talentoso con experiencia en diferentes formas de arte. Me gusta poner atención en los detalles y tengo una forma especial de ver las cosas, lo que me permite crear obras de arte únicas e interesantes que llaman la atención.",
+  "member_since": "29/05/2023",
+  "country": "Argentina",
+  "role": "artist",
+  "languages": [
+    "Español",
+    "Inglés"
+  ],
+  "categories": [
+    "Pintura",
+    "Acrílico",
+    "Realista"
+  ],
+  "social_networks": [
+    "twitter.com/caromartinez91",
+    "instagram.com/caromartinez91"
+  ],
+  "education": [
+    {
+      "degree": "Licenciatura en Artes Plásticas",
+      "institution": "Universidad de la Plata",
+      "date": "28/12/2015"
+    }
+  ],
+  "portfolio": [
+    "casa.png",
+    "dragon.png",
+    "perro.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "64750292a9a76db05641cda2"
+  },
+  "username": "gonzamedina88",
+  "first_name": "Gonzalo",
+  "last_name": "Medina",
+  "email": "gmedina@gmail.com",
+  "avatar": "gonzamedina88.jpg",
+  "description": "Soy un amante del arte en todas sus formas, siempre buscando nuevos artistas y estilos.",
+  "member_since": "29/05/2023",
+  "country": "Argentina",
+  "role": "buyer",
+  "languages": [
+    "Español",
+    "Portugués"
+  ],
+  "social_networks": [
+    "twitter.com/gmedina88"
+  ],
+  "education": [
+    {
+      "degree": "Arquitectura",
+      "institution": "Universidad de Buenos Aires",
+      "date": "17/07/2012"
+    }
+  ],
+  "purchases": [
+    "64750337a9a76db05641cdaf"
+  ]
+},
+{
+  "_id": {
+    "$oid": "647b4c9c82d5e5e199b5b768"
+  },
+  "username": "diegolozada",
+  "first_name": "Diego",
+  "last_name": "Lozada",
+  "email": "dlozada@gmail.com",
+  "password": "asdasd",
+  "avatar": "diegolozada.jpg",
+  "description": "Dibjunte amateur",
+  "member_since": "12/03/2023",
+  "country": "Argentina",
+  "role": "artist",
+  "languages": [
+    "Español",
+    "Francés"
+  ],
+  "categories": [
+    "Dibujo",
+    "Lápiz",
+    "Minimalista"
+  ],
+  "social_networks": [
+    "instagram.com/diegolo"
+  ],
+  "portfolio": [
+    "gato.png",
+    "playa.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "647b4c9c82d5e5e199b5b769"
+  },
+  "username": "lflores",
+  "first_name": "Lucas",
+  "last_name": "Flores",
+  "email": "lflores@gmail.com",
+  "avatar": "lflores.jpg",
+  "description": "Artista plástico profesional, apasionado del arte",
+  "member_since": "15/02/2023",
+  "country": "Argentina",
+  "role": "artist",
+  "languages": [
+    "Español"
+  ],
+  "categories": [
+    "Escultura",
+    "Arcilla",
+    "Moderno"
+  ],
+  "social_networks": [
+    "twitter.com/lucasflores"
+  ],
+  "education": [
+    {
+      "degree": "Historia del Arte",
+      "institution": "UMSA",
+      "date": "21/09/2005"
+    }
+  ],
+  "portfolio": [
+    "risa.png",
+    "elefante.png"
+  ]
+},
+{
+  "_id": {
+    "$oid": "647b4c9c82d5e5e199b5b76a"
+  },
+  "username": "tgonzalez",
+  "first_name": "Tamara",
+  "last_name": "González",
+  "email": "tgonzalez@gmail.com",
+  "avatar": "lflores.jpg",
+  "description": "Me encatna el arte.",
+  "member_since": "20/04/2023",
+  "country": "Argentina",
+  "role": "buyer",
+  "languages": [
+    "Español",
+    "Italiano"
+  ],
+  "social_networks": [
+    "twitter.com/tgonzlez"
+  ],
+  "education": [
+    {
+      "degree": "Abogada",
+      "institution": "Universidad de Buenos Aires",
+      "date": "11/04/2013"
+    }
+  ],
+  "purchases": [
+    "64750337a9a76db05641cdaf"
+  ]
+},
+{
+  "_id": {
+    "$oid": "647b5be482d5e5e199b5b77b"
+  },
+  "username": "lalocarusso",
+  "email": "lalocarusso@gmail.com",
+  "role": "artist"
+}]

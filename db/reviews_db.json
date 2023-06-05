@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "64750304a9a76db05641cdad"
+  },
+  "artist_id": "647502e4a9a76db05641cda9",
+  "reviews": [
+    {
+      "author_id": "64750292a9a76db05641cda2",
+      "author_username": "gonzamedina88",
+      "comment": "Excelente artista. Realizo el trabajo en tiempo y forma con resultados altamente satisfactorios.",
+      "score": 5,
+      "date": "29/05/2023"
+    },
+    {
+      "author_id": "647b4c9c82d5e5e199b5b76a",
+      "author_username": "tgonzalez",
+      "comment": "Cumplió con lo pactado pero no me gustó mucho el trabajo final",
+      "score": 2,
+      "date": "27/05/2023"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "647b5a7b82d5e5e199b5b776"
+  },
+  "artist_id": "647b4c9c82d5e5e199b5b768",
+  "reviews": [
+    {
+      "author_id": "64750292a9a76db05641cda2",
+      "author_username": "gonzamedina88",
+      "comment": "Buen trabajo, lo entregó un poco tarde pero quedé satisfecho.",
+      "score": 4,
+      "date": "11/04/2023"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "647b5a7b82d5e5e199b5b777"
+  },
+  "artist_id": "647b4c9c82d5e5e199b5b769",
+  "reviews": [
+    {
+      "author_id": "647b4c9c82d5e5e199b5b76a",
+      "author_username": "tgonzalez",
+      "comment": "Muy bueno, recomendado",
+      "score": 4,
+      "date": "20/04/2023"
+    }
+  ]
+}]

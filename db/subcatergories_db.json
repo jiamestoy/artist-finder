@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "64750448a9a76db05641cdc6"
+  },
+  "type": [
+    "Oleo",
+    "Acrílico",
+    "Acuarela",
+    "Gouche",
+    "Otros",
+    "Aerosol"
+  ],
+  "style": [
+    "Abstracto",
+    "Fotorrealista",
+    "Surrealista",
+    "Impresionista",
+    "Moderno",
+    "Realista",
+    "Urbano",
+    "Minimalista",
+    "Otro"
+  ],
+  "parent_category": "64750431a9a76db05641cdc2"
+},
+{
+  "_id": {
+    "$oid": "64750448a9a76db05641cdc7"
+  },
+  "type": [
+    "Lápiz",
+    "Carbonilla",
+    "Tinta",
+    "Pastel",
+    "Otros"
+  ],
+  "style": [
+    "Abstracto",
+    "Fotorrealista",
+    "Surrealista",
+    "Impresionista",
+    "Moderno",
+    "Realista",
+    "Urbano",
+    "Minimalista",
+    "Otro"
+  ],
+  "parent_category": "64750431a9a76db05641cdc3"
+},
+{
+  "_id": {
+    "$oid": "64750448a9a76db05641cdc8"
+  },
+  "type": [
+    "Piedra",
+    "Arcilla",
+    "Madera",
+    "Metal",
+    "Ceramica",
+    "Vidrio",
+    "Plástico",
+    "Mármol",
+    "Cera",
+    "Otros"
+  ],
+  "style": [
+    "Abstracto",
+    "Fotorrealista",
+    "Surrealista",
+    "Impresionista",
+    "Moderno",
+    "Realista",
+    "Urbano",
+    "Minimalista",
+    "Otro"
+  ],
+  "parent_category": "64750431a9a76db05641cdc4"
+}]

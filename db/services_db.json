@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "64750337a9a76db05641cdaf"
+  },
+  "name": "Pintura en Acrílico",
+  "description": "Realizo un cuadro con pintura acrílica en estilo realistas. Personas, animales, paisajes o cualquier cosa que quieras que sea retratado en un cuadro.",
+  "image": "string",
+  "min_price": 5000,
+  "categories": [
+    "Pintura",
+    "Acrílico",
+    "Realista"
+  ],
+  "artist_id": "647502e4a9a76db05641cda9"
+}]

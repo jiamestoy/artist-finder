@@ -1,20 +1,16 @@
 import express from 'express';
-import { createPage } from './pages/helper.js';
+import UsersRoute from './routes/users.routes.js';
+import UsersRouteApi from './api/routes/users.api.routes.js';
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use('/api', express.json());
 
 app.use('/', express.static('public'));
 
-app.get('/', function (req, res) {
-    res.write(createPage('Home', 'home'))
-})
+app.use(UsersRoute);
+app.use('/api', UsersRouteApi);
 
-app.get('/artista', function (req, res) {
-    res.write(createPage('Perfil de Artista', 'artista'))
+app.listen(1234, function(){ 
+    console.log('Servidor corriendo en el host http://localhost:1234')
 })
-
-app.get('/comprador', function (req, res) {
-    res.write(createPage('Perfil de Comprador', 'comprador'))
-})
-
-app.listen(1234);
