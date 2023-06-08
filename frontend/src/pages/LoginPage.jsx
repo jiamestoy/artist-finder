@@ -32,7 +32,7 @@ function LoginPage(){
             
             localStorage.setItem('token', token)
 
-            navigate('/', {replace: true})
+            navigate('/artists', {replace: true})
         })
         .catch(e=>{
             console.log("Error al iniciar sesion", error)
