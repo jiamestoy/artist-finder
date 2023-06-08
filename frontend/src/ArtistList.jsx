@@ -21,9 +21,9 @@ function ArtistList({list}){
             <form className='artist-list__form'>
             <input id="filtro" className="artist-list__filter form-control" type='text' onChange={onChangeFilter} />
             </form>
-            <ul className='artist-list__list'>
+            <div className='artist-list__list'>
                 {artists.map(artist => <ArtistListItem key={artist._id} artist={artist} />)}
-            </ul>
+            </div>
         </div>
     )
 }
