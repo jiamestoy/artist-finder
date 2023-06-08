@@ -44,10 +44,29 @@ async function createUser(user){
     await db.collection('users').insertOne(newUser);
 }
 
+async function login(account){
+    await client.connect()
+
+    const accountExist = await db.collection('users').findOne({username: account.username})
+
+    if (!accountExist){
+        throw new Error('La cuenta no existe')
+    }
+
+    const isMatch = await bcrypt.compare(account.password, accountExist.password)
+
+    if(!isMatch){
+        throw new Error('Password incorrecto')
+    }
+
+    return {...accountExist, password: undefined}
+}
+
 
 export {
     getUsers,
     getUserById,
     createUser,
-    getArtists
+    getArtists,
+    login
 }

@@ -11,6 +11,18 @@ async function validateUser(req, res, next){
     })
 }
 
+async function validateLogin(req, res, next){
+    return userSchemas.login.validate(req.body, {abortEarly: false, stripUnknown: true})
+    .then((user)=>{
+        req.body = user
+        next()
+    })
+    .catch((err)=>{
+        res.status(400).json({error: {message: err}, test: 'Error al validar middleware'})
+    })
+}
+
 export {
-    validateUser
+    validateUser,
+    validateLogin
 }

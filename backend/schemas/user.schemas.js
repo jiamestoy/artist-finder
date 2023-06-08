@@ -7,6 +7,12 @@ const user = yup.object({
     role: yup.string().required(),
 })
 
+const login = yup.object({
+    username: yup.string().trim().required(),
+    password: yup.string().required(),
+})
+
 export {
-    user
+    user,
+    login
 }

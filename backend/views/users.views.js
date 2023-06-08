@@ -36,7 +36,7 @@ function createNavbar() {
                     <a class="nav-link" href="/buyers">Compradores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login">Iniciar Sesión</a>
+                    <a class="nav-link" href="http://localhost:5173/login">Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/signup">Registrarse</a>
