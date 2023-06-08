@@ -12,6 +12,14 @@ async function getUsers(filter = {}) {
     return db.collection('users').find(filterMongo).toArray();
 }
 
+async function getArtists(filter = {}) {
+
+    const filterMongo = { deleted: { $ne: true } }
+
+    await client.connect();
+    return db.collection('users').find({ role: 'artist' }).toArray();
+}
+
 async function getUserById(idUser) {
     await client.connect();
     return db.collection('users').findOne({ _id: new ObjectId(idUser) });
@@ -40,5 +48,6 @@ async function createUser(user){
 export {
     getUsers,
     getUserById,
-    createUser
+    createUser,
+    getArtists
 }
