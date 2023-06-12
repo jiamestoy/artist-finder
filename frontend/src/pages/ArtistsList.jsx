@@ -8,8 +8,23 @@ function ArtistsList({list}){
 
     const onChangeFilter = (event)=>{
         const filter = event.target.value.toLowerCase()
-        const artistsFiler = list.filter(artist => artist.categories && artist.categories.some(category => category.toLowerCase().includes(filter)) || artist.username.toLowerCase().includes(filter))
-        setArtists(artistsFiler)
+
+        const filterWords = filter.toLowerCase().split(" ");
+
+        function removeSpecialChars(string) {
+          return string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        }
+        
+        const artistsFilter = list.filter(artist =>
+          filterWords.every(word =>
+            (artist.categories && artist.categories.some(category => removeSpecialChars(category.toLowerCase()).includes(removeSpecialChars(word)))) ||
+            (artist.username && removeSpecialChars(artist.username.toLowerCase()).includes(removeSpecialChars(word))) ||
+            (artist.first_name && removeSpecialChars(artist.first_name.toLowerCase()).includes(removeSpecialChars(word))) ||
+            (artist.last_name && removeSpecialChars(artist.last_name.toLowerCase()).includes(removeSpecialChars(word)))
+          )
+        );   
+        
+        setArtists(artistsFilter)
     }
 
     useEffect(()=>{
