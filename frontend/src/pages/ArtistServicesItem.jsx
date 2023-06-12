@@ -5,7 +5,7 @@ function ArtistServicesItem({service}){
     return (
         <div className="col-lg-4 mt-2">
             <div className="card p-2"> 
-                <a href="#"><img src="../imgs/service_placeholder.webp" alt="Servicio" className="card-img-top rounded" /></a>
+                <a href="#"><img className="card-img-top rounded" src={`../imgs/${service.img ? service.img : 'service_placeholder.webp'}`} alt={`Imagen de ${service.name}`} /></a>
                 <div className="card-body p-0">
                     <a href="#" className="link-dark link-underline-opacity-0 link-hover">
                         <h4 className="card-title fs-5 fw-semibold mb-0 mt-2">{service.name}</h4>

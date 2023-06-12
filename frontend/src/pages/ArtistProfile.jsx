@@ -4,8 +4,8 @@ import usersService from "../services/users.service"
 import ArtistServices from './ArtistServices'
 import ArtistPortfolio from './ArtistPortfolio'
 import ArtistReviews from './ArtistReviews'
-import ArtistDegree from './ArtistDegree'
-import ArtistSocialNetwork from './ArtistSocialNetwork'
+import UserDegree from './UserDegree'
+import UserSocialNetwork from './UserSocialNetwork'
 
 function ArtistProfile(){
     const [artist, setArtist] = useState({})
@@ -26,12 +26,12 @@ function ArtistProfile(){
                         <img src={`/imgs/avatars/${artist.avatar ? artist.avatar : 'avatar_placeholder.png'}`} alt={`Avatar de ${artist.username}`} className="img-thumbnail mb-3" />
                         <h1 className="fs-2 fw-semibold">{(artist.first_name || artist.last_name) != null ? artist.first_name + ' ' + artist.last_name : artist.username}</h1>
                         <p className="card-text">Categorias: {artist.categories? artist.categories.join(", ") : 'Sin categorías'}</p>
-                            <div className="d-flex justify-content-between align-items-center p-2">
-                                <div className="d-flex flex-column">
-                                    <a className="card-text text-dark text-decoration-none" href={`/user/${artist._id}/#reviews"`}>Calificaciones: </a> 
-                                </div>
+                        <div className="d-flex justify-content-between align-items-center p-2">
+                            <div className="d-flex flex-column">
+                                <a className="card-text text-dark text-decoration-none" href={`/user/${artist._id}/#reviews"`}>Calificaciones: </a> 
                             </div>
-                            <a href="#" className="btn btn-primary">Contactar</a>
+                        </div>
+                        <a href="#" className="btn btn-primary">Contactar</a>
                     </div>
 
                     <div className="p-4 mb-4 border rounded d-flex flex-column">
@@ -48,12 +48,12 @@ function ArtistProfile(){
                             <p className="card-text">{artist.languages? artist.languages.join(", ") : 'Sin idiomas'}</p>
                             <h3 className="fs-5 fw-semibold">Educación</h3>
                             <div>
-                                {artist.education ? artist.education.map(degree => <ArtistDegree key={degree} degree={degree}/>) : <p>Sin títulos.</p>}
+                                {artist.education ? artist.education.map(degree => <UserDegree key={degree} degree={degree}/>) : <p>Sin títulos.</p>}
                             </div>
                             <h3 className="fs-5 fw-semibold">Redes Sociales</h3>
                             <div>
                                 <ul>
-                                    {artist.social_networks ? artist.social_networks.map(social_network => <ArtistSocialNetwork key={social_network} social_network={social_network}/>) : <li>Sin redes sociales.</li>}
+                                    {artist.social_networks ? artist.social_networks.map(social_network => <UserSocialNetwork key={social_network} social_network={social_network}/>) : <li>Sin redes sociales.</li>}
                                 </ul>
                             </div>
                         </div>

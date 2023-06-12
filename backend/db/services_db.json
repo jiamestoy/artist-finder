@@ -4,7 +4,7 @@
   },
   "name": "Pintura en Acrílico",
   "description": "Realizo un cuadro con pintura acrílica en estilo realistas. Personas, animales, paisajes o cualquier cosa que quieras que sea retratado en un cuadro.",
-  "image": "string",
+  "img": "string",
   "min_price": 5000,
   "categories": [
     "Pintura",

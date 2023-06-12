@@ -1,10 +1,19 @@
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 
 const client = new MongoClient('mongodb://127.0.0.1:27017');
 const db = client.db('ARTIST_FINDER');
 
 
-async function getServices(idUser) {
+async function getServicesById(idService) {
+    
+    await client.connect()
+
+    const userServices = db.collection('services').findOne({ _id: new ObjectId(idService) });
+
+    return userServices
+}
+
+async function getServicesByUserId(idUser) {
 
     await client.connect()
 
@@ -17,5 +26,6 @@ async function getServices(idUser) {
 }
 
 export {
-    getServices,
+    getServicesById,
+    getServicesByUserId,
 }

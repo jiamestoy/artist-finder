@@ -5,6 +5,7 @@ import ArtistsListPage from './pages/ArtistsListPage'
 import BuyersListPage from './pages/BuyersListPage'
 import LoginPage from './pages/LoginPage'
 import ArtistProfile from './pages/ArtistProfile'
+import BuyerProfile from './pages/BuyerProfile'
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
@@ -26,8 +27,13 @@ const router = createBrowserRouter([
     element: <LoginPage />
   },
   {
-    path: '/user/:idUser',
+    path: '/artist/:idUser',
     element: <ArtistProfile />,
+  },
+  ,
+  {
+    path: '/buyer/:idUser',
+    element: <BuyerProfile />,
   },
 ])
 
