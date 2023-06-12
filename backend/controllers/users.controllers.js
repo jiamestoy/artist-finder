@@ -1,6 +1,6 @@
 import * as services from '../services/users.services.js';
-import * as reviewsServices from '../services/users.reviews.services.js';
-import * as servicesServices from '../services/users.services.services.js';
+import * as reviewsServices from '../services/reviews.services.js';
+import * as servicesServices from '../services/services.services.js';
 import * as views from '../views/users.views.js';
 
 function getHome(req, res) {

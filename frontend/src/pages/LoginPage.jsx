@@ -44,14 +44,14 @@ function LoginPage(){
         <div className='login-page'>
             <div className="container w-50 my-3 p-3 border rounded d-flex flex-column">
                 <h1 className="mb-3 align-self-center">Login</h1>
-                <form className="d-flex flex-column" id="login-form" novalidate onSubmit={onSubmit}>
+                <form className="d-flex flex-column" id="login-form" noValidate onSubmit={onSubmit}>
                     <div className="mb-3">
-                    <label for="username" className="form-label">Nombre de Usuario:</label>
+                    <label htmlFor="username" className="form-label">Nombre de Usuario:</label>
                     <input type="text" id="username" name="username" className="form-control" required onChange={onChangeUsername} value={username}/>
                     <div className="invalid-feedback" id="username-feedback"></div>
                     </div>
                     <div className="mb-3">
-                    <label for="password" className="form-label">Password:</label>
+                    <label htmlFor="password" className="form-label">Password:</label>
                     <input type="password" id="password" name="password" className="form-control" required onChange={onChangePassword} value={password}/>
                     <div className="invalid-feedback" id="password-feedback"></div>
                     </div>

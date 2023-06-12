@@ -4,20 +4,10 @@ import bcrypt from 'bcrypt'
 const client = new MongoClient('mongodb://127.0.0.1:27017');
 const db = client.db('ARTIST_FINDER');
 
-async function getUsers(filter = {}) {
-
-    const filterMongo = { deleted: { $ne: true } }
-
+async function getUsers(role) {
+    
     await client.connect();
-    return db.collection('users').find(filterMongo).toArray();
-}
-
-async function getArtists(filter = {}) {
-
-    const filterMongo = { deleted: { $ne: true } }
-
-    await client.connect();
-    return db.collection('users').find({ role: 'artist' }).toArray();
+    return db.collection('users').find({ role: role }).toArray();
 }
 
 async function getUserById(idUser) {
@@ -67,6 +57,5 @@ export {
     getUsers,
     getUserById,
     createUser,
-    getArtists,
     login
 }

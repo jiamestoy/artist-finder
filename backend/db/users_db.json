@@ -174,4 +174,151 @@
   "username": "lalocarusso",
   "email": "lalocarusso@gmail.com",
   "role": "artist"
+},
+{
+  "_id": {
+    "$oid": "647502e4a9a76db05641cda9"
+  },
+  "username": "jorgelopez",
+  "first_name": "Jorge",
+  "last_name": "Lopez",
+  "email": "jlopez@gmail.com",
+  "password": "asdasd",
+  "description": "Soy un artista creativo y talentoso con experiencia en diferentes formas de arte. Me gusta poner atención en los detalles y tengo una forma especial de ver las cosas, lo que me permite crear obras de arte únicas e interesantes que llaman la atención.",
+  "member_since": "29/05/2023",
+  "country": "Argentina",
+  "role": "artist",
+  "languages": [
+    "Español",
+    "Inglés"
+  ],
+  "categories": [
+    "Pintura",
+    "Acuarela",
+    "Fotorrealista"
+  ],
+  "social_networks": [
+    "twitter.com/caromartinez91",
+    "instagram.com/caromartinez91"
+  ],
+  "education": [
+    {
+      "degree": "Licenciatura en Artes Plásticas",
+      "institution": "Universidad de la Plata",
+      "date": "28/12/2015"
+    }
+  ],
+  "portfolio": [
+    "casa.png",
+    "dragon.png",
+    "perro.png"
+  ]
+},
+{
+  "username": "martindominguez",
+  "first_name": "Martin",
+  "last_name": "Dominguez",
+  "email": "mdominguez@gmail.com",
+  "password": "asdasd",
+  "description": "Soy un artista creativo y talentoso con experiencia en diferentes formas de arte. Me gusta poner atención en los detalles y tengo una forma especial de ver las cosas, lo que me permite crear obras de arte únicas e interesantes que llaman la atención.",
+  "member_since": "29/05/2023",
+  "country": "Argentina",
+  "role": "artist",
+  "languages": [
+    "Español",
+    "Inglés"
+  ],
+  "categories": [
+    "Pintura",
+    "Oleo",
+    "Urbano"
+  ],
+  "social_networks": [
+    "twitter.com/caromartinez91",
+    "instagram.com/caromartinez91"
+  ],
+  "education": [
+    {
+      "degree": "Licenciatura en Artes Plásticas",
+      "institution": "Universidad de la Plata",
+      "date": "28/12/2015"
+    }
+  ],
+  "portfolio": [
+    "casa.png",
+    "dragon.png",
+    "perro.png"
+  ]
+},
+{
+  "username": "solalvarez",
+  "first_name": "Soledad",
+  "last_name": "Alvarez",
+  "email": "solalvarez@gmail.com",
+  "password": "asdasd",
+  "description": "Soy un artista creativo y talentoso con experiencia en diferentes formas de arte. Me gusta poner atención en los detalles y tengo una forma especial de ver las cosas, lo que me permite crear obras de arte únicas e interesantes que llaman la atención.",
+  "member_since": "29/05/2023",
+  "country": "Argentina",
+  "role": "artist",
+  "languages": [
+    "Español",
+    "Inglés"
+  ],
+  "categories": [
+    "Escultura",
+    "Piedra",
+    "Abstracto"
+  ],
+  "social_networks": [
+    "twitter.com/caromartinez91",
+    "instagram.com/caromartinez91"
+  ],
+  "education": [
+    {
+      "degree": "Licenciatura en Artes Plásticas",
+      "institution": "Universidad de la Plata",
+      "date": "28/12/2015"
+    }
+  ],
+  "portfolio": [
+    "casa.png",
+    "dragon.png",
+    "perro.png"
+  ]
+},
+{
+  "username": "luciagomez",
+  "first_name": "Lucía",
+  "last_name": "Gomez",
+  "email": "lgomez@gmail.com",
+  "password": "asdasd",
+  "description": "Soy un artista creativo y talentoso con experiencia en diferentes formas de arte. Me gusta poner atención en los detalles y tengo una forma especial de ver las cosas, lo que me permite crear obras de arte únicas e interesantes que llaman la atención.",
+  "member_since": "29/05/2023",
+  "country": "Argentina",
+  "role": "artist",
+  "languages": [
+    "Español",
+    "Inglés"
+  ],
+  "categories": [
+    "Dibujo",
+    "Carbonilla",
+    "Urbano"
+  ],
+  "social_networks": [
+    "twitter.com/caromartinez91",
+    "instagram.com/caromartinez91"
+  ],
+  "education": [
+    {
+      "degree": "Licenciatura en Artes Plásticas",
+      "institution": "Universidad de la Plata",
+      "date": "28/12/2015"
+    }
+  ],
+  "portfolio": [
+    "casa.png",
+    "dragon.png",
+    "perro.png"
+  ]
 }]

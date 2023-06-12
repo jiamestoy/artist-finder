@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types'
-import './ArtistListItem.css'
+import './ArtistsListItem.css'
 
-function ArtistListItem({artist}) {
+function ArtistsListItem({artist}) {
 
     return (
-
-
         <div>
             <div className="card artist-list-item">
-            <img className='artist-list-item__image' src={`http://localhost:1234/imgs/avatars/${artist.avatar ? artist.avatar : 'avatar_placeholder.png'}`} alt={`Avatar de ${artist.username}`} />
+            <img className='artist-list-item__image' src={`/imgs/avatars/${artist.avatar ? artist.avatar : 'avatar_placeholder.png'}`} alt={`Avatar de ${artist.username}`} />
                 <div className="card-body">
                     <h5 className="card-title">{artist.username}</h5>
                     <p className="card-text">Categorias: {artist.categories? artist.categories.join(", ") : 'El artista no tiene categorías seleccionadas.'}</p>
-                    <a href={`http://localhost:1234/artists/${artist._id}`} className="btn btn-primary">VER ARTISTA</a>
+                    <a href={`/user/${artist._id}`} className="btn btn-primary">VER ARTISTA</a>
                 </div>
             </div>
         </div>
@@ -20,8 +18,8 @@ function ArtistListItem({artist}) {
     )
 }
 
-ArtistListItem.ArtistListItem = {
+ArtistsListItem.ArtistsListItem = {
     artist: PropTypes.object.isRequired,
 }
 
-export default ArtistListItem;
+export default ArtistsListItem;

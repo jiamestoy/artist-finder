@@ -1,14 +1,26 @@
 import * as service from '../../services/users.services.js'
 import * as tokenService from '../../services/token.services.js'
 
-function getUsers(req, res) {
-    const filter = req.query
 
-    service.getArtists(filter)
+function getUsers(req, res) {
+
+    const role = req.params.role
+
+    service.getUsers(role)
         .then(function (users) {
             res.status(200).json(users)
         })
 
+}
+
+function getUsersById(req, res) {
+    
+    const idUser = req.params.idUser
+
+    service.getUserById(idUser)
+        .then(function (user) {
+            res.status(200).json(user)
+        })
 }
 
 async function createUser(req, res) {
@@ -49,6 +61,7 @@ async function logout(req, res){
 export {
     createUser,
     getUsers,
+    getUsersById,
     login,
     logout
 }

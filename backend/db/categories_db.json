@@ -2,17 +2,77 @@
   "_id": {
     "$oid": "64750431a9a76db05641cdc2"
   },
-  "name": "Pintura"
+  "name": "Pintura",
+  "type": [
+    "Oleo",
+    "Acrílico",
+    "Acuarela",
+    "Gouche",
+    "Otros",
+    "Aerosol"
+  ],
+  "style": [
+    "Abstracto",
+    "Fotorrealista",
+    "Surrealista",
+    "Impresionista",
+    "Moderno",
+    "Realista",
+    "Urbano",
+    "Minimalista",
+    "Otro"
+  ]
 },
 {
   "_id": {
     "$oid": "64750431a9a76db05641cdc3"
   },
-  "name": "Dibujo"
+  "name": "Dibujo",
+  "type": [
+    "Lápiz",
+    "Carbonilla",
+    "Tinta",
+    "Pastel",
+    "Otros"
+  ],
+  "style": [
+    "Abstracto",
+    "Fotorrealista",
+    "Surrealista",
+    "Impresionista",
+    "Moderno",
+    "Realista",
+    "Urbano",
+    "Minimalista",
+    "Otro"
+  ]
 },
 {
   "_id": {
     "$oid": "64750431a9a76db05641cdc4"
   },
-  "name": "Escultura"
+  "name": "Escultura",
+  "type": [
+    "Piedra",
+    "Arcilla",
+    "Madera",
+    "Metal",
+    "Ceramica",
+    "Vidrio",
+    "Plástico",
+    "Mármol",
+    "Cera",
+    "Otros"
+  ],
+  "style": [
+    "Abstracto",
+    "Fotorrealista",
+    "Surrealista",
+    "Impresionista",
+    "Moderno",
+    "Realista",
+    "Urbano",
+    "Minimalista",
+    "Otro"
+  ]
 }]

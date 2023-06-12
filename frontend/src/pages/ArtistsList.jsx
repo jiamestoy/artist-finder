@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import ArtistListItem from './ArtistListItem.jsx'
+import ArtistsListItem from './ArtistsListItem.jsx'
 import { useState, useEffect } from 'react'
 
 
-function ArtistList({list}){
+function ArtistsList({list}){
     const [artists, setArtists] = useState(list)
 
     const onChangeFilter = (event)=>{
@@ -22,14 +22,14 @@ function ArtistList({list}){
             <input id="filtro" className="artist-list__filter form-control" type='text' onChange={onChangeFilter} />
             </form>
             <div className='artist-list__list'>
-                {artists.map(artist => <ArtistListItem key={artist._id} artist={artist} />)}
+                {artists.map(artist => <ArtistsListItem key={artist._id} artist={artist} />)}
             </div>
         </div>
     )
 }
 
-ArtistList.propTypes = {
+ArtistsList.propTypes = {
     list: PropTypes.array.isRequired
 }
 
-export default ArtistList
+export default ArtistsList
