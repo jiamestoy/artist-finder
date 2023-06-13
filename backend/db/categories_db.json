@@ -2,14 +2,14 @@
   "_id": {
     "$oid": "64750431a9a76db05641cdc2"
   },
-  "name": "Pintura",
+  "name": "pintura",
   "type": [
     "Oleo",
     "Acrílico",
     "Acuarela",
     "Gouche",
-    "Otros",
-    "Aerosol"
+    "Aerosol",
+    "Otros"
   ],
   "style": [
     "Abstracto",
@@ -27,7 +27,7 @@
   "_id": {
     "$oid": "64750431a9a76db05641cdc3"
   },
-  "name": "Dibujo",
+  "name": "dibujo",
   "type": [
     "Lápiz",
     "Carbonilla",
@@ -51,7 +51,7 @@
   "_id": {
     "$oid": "64750431a9a76db05641cdc4"
   },
-  "name": "Escultura",
+  "name": "escultura",
   "type": [
     "Piedra",
     "Arcilla",

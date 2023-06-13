@@ -58,7 +58,7 @@ function LoginPage(){
                     <a href="#">¿Olvidaste tu contraseña?</a>
                     <p className='login-error'>{error}</p>
                     <button type="submit" className="login-button align-self-center w-50" id="login-button">Iniciar Sesión</button>
-            </form>
+                </form>
             </div>
         </div>
     )

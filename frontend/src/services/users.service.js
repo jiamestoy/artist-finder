@@ -12,15 +12,21 @@ async function getUserById(idUser) {
     return API.call({ uri: `user/${idUser}` })
 }
 
+async function createUser({username, email, password, passwordCheck, role}) {
+    return API.call({ uri: `users`, method: 'POST', body: { username, email, password, passwordCheck, role } })
+}
+
 
 export {
     getArtists,
     getBueyers,
-    getUserById
+    getUserById,
+    createUser
 }
 
 export default {
     getArtists,
     getBueyers,
-    getUserById
+    getUserById,
+    createUser
 }
