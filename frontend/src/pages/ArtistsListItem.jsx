@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import './ArtistsListItem.css'
+import { Link } from 'react-router-dom'
 
 function ArtistsListItem({artist}) {
     
@@ -10,7 +11,7 @@ function ArtistsListItem({artist}) {
                 <div className="card-body">
                     <h5 className="card-title">{artist.first_name && artist.last_name ? artist.first_name + " " + artist.last_name : artist.username}</h5>
                     <p className="card-text">Categorias: {artist.categories? artist.categories.join(", ") : 'El artista no tiene categorías seleccionadas.'}</p>
-                    <a href={`/artist/${artist._id}`} className="btn btn-primary">Ver Artista</a>
+                    <Link to={`/artist/${artist._id}`} className="btn btn-primary">Ver Artista</Link>
                 </div>
             </div>
         </div>

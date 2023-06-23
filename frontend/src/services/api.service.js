@@ -12,11 +12,11 @@ async function call({ uri, method = 'GET', body = undefined }) {
                 return await response.json()
             }
             else {
-                if (response.status === 401) {
-                    localStorage.removeItem('token')
+                // if (response.status === 401) {
+                //     localStorage.removeItem('token')
 
-                    throw { error: { message: 'No autorizado' } }
-                }
+                //     throw { error: { message: 'No autorizado' } }
+                // }
 
                 throw await response.json()
             }

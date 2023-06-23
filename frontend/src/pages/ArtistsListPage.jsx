@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import ArtistsList from './ArtistsList'
 import usersService from '../services/users.service'
+import MainNav from "../components/MainNav"
+import { SessionProvider } from "../contexts/session.context"
 
 
 
@@ -14,10 +16,13 @@ function ArtistsListPage(){
     }, [])
 
     return (
-        <div>
-            <h1 className="container-lg">Buscar Artista</h1>
-            <ArtistsList list={artists} />
-        </div>
+        <SessionProvider>
+            <MainNav/>
+            <div>
+                <h1 className="container-lg">Buscar Artista</h1>
+                <ArtistsList list={artists} />
+            </div>
+        </SessionProvider>
     )
 }
 

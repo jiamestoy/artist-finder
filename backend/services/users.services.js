@@ -52,10 +52,22 @@ async function login(account){
     return {...accountExist, password: undefined}
 }
 
+async function getCurrentUser(idUser) {
+    await client.connect()
+
+    const user = await db.collection('users').findOne({_id: new ObjectId(idUser)})
+
+    if (!user) {
+        throw new Error('No hay usuario con sesión iniciada.')
+    }
+
+    return user
+}
 
 export {
     getUsers,
     getUserById,
     createUser,
-    login
+    login,
+    getCurrentUser,
 }
