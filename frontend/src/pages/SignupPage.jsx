@@ -2,6 +2,7 @@ import {useState} from 'react'
 import './SignupPage.css'
 import { useNavigate } from 'react-router-dom'
 import usersService from '../services/users.service.js'
+import authService from '../services/auth.service'
 import MainNav from '../components/MainNav'
 import { SessionProvider } from '../contexts/session.context'
 
@@ -40,7 +41,12 @@ function SignupPage(){
 
         usersService.createUser({username, email, password, role})
         .then(()=>{
-            navigate('/success', {replace: true})
+            authService.login({username, password})
+            .then(({token, account}) => {
+                console.log("Sesion iniciada", {token, account})
+                localStorage.setItem('token', token)
+                navigate('/success', {replace: true})
+            })
         }).catch(e=>{
             console.log("Error al registrarse", e.message)
             setError(e.message)
