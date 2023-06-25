@@ -12,16 +12,6 @@ async function getCategories() {
     return userServices
 }
 
-async function getCategoryByName(name) {
-    
-    await client.connect()
-
-    const userServices = db.collection('categories').findOne({ name: name });
-
-    return userServices
-}
-
 export {
     getCategories,
-    getCategoryByName
 }

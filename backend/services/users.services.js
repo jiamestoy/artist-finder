@@ -35,6 +35,7 @@ async function createUser(user){
 }
 
 async function login(account){
+
     await client.connect()
 
     const accountExist = await db.collection('users').findOne({username: account.username})

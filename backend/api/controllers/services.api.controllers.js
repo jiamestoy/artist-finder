@@ -1,5 +1,13 @@
 import * as service from '../../services/services.services.js'
 
+function getServices(req, res) {
+
+    service.getServices()
+        .then(function (service) {
+            res.status(200).json(service)
+        })
+}
+
 
 function getServicesById(req, res) {
     
@@ -21,7 +29,21 @@ function getServicesByUserId(req, res) {
         })
 }
 
+async function addService(req, res) {
+
+    return service.createService(req.body)
+    .then(()=>{
+        res.status(201).json({message: 'Servicio creado con éxito.'})
+        // res.redirect("/success")
+    })
+    .catch((err)=>{
+        res.status(400).json({error: {message: err, test: 'Error del controller'}})
+    })
+}
+
 export {
+    getServices,
     getServicesById,
-    getServicesByUserId
+    getServicesByUserId,
+    addService
 }

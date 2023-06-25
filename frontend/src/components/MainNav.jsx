@@ -22,14 +22,24 @@ function MainNav(){
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/artists">Buscar Artista</Link>
+                        <Link className="nav-link" to="/artists">Buscar</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/buyers">Compradores</Link>
                     </li>
                     {
                     localStorage.getItem('token') ? 
-                    <li><Link className="nav-link" onClick={()=>{onLogout();profileCheck();}}>Cerrar Sesión ({profile.username})</Link></li> : 
+                    <div className='d-flex'>
+                        {
+                        profile.role === 'artist' ?
+                        <div className='d-flex'>
+                            <li><Link className="nav-link" to={`/artist/${profile._id}`}>Mi Perfil ({profile.username})</Link></li>
+                            <li><Link className="nav-link" to={`/add-service/${profile._id}`}>Agregar Servicio</Link></li>
+                        </div> :
+                        <li><Link className="nav-link" to={`/buyer/${profile._id}`}>Mi Perfil ({profile.username})</Link></li>
+                        }
+                        <li><Link className="nav-link" onClick={()=>{onLogout();profileCheck();}}>Cerrar Sesión</Link></li>
+                    </div> : 
                     <div className='d-flex'>
                         <li className="nav-item">
                             <Link className="nav-link" to="/login">Iniciar Sesión</Link>

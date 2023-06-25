@@ -181,11 +181,11 @@ function SignupPage(){
                         <legend className="text-center">¿Quieres ofrecer tus servicios?</legend>
                         <div className="d-flex justify-content-center">
                             <div className="mx-3">
-                                <input type="radio" name="role" value="artist" className="form-check-input" required onChange={onChangeRole}/>
+                                <input type="radio" id="userArtist" name="role" value="artist" className="form-check-input" required onChange={onChangeRole}/>
                                 <label htmlFor="userArtist" className="form-check-label">Sí, soy artista</label>
                             </div>
                             <div className="mx-3">
-                                <input type="radio" name="role" value="buyer" className="form-check-input" onChange={onChangeRole} />
+                                <input type="radio" id="userBuyer" name="role" value="buyer" className="form-check-input" onChange={onChangeRole} />
                                 <label htmlFor="userBuyer" className="form-check-label">No, sólo quiero comprar</label>
                             </div>
                         </div>

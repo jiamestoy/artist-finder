@@ -3,6 +3,15 @@ import { MongoClient, ObjectId } from 'mongodb';
 const client = new MongoClient('mongodb://127.0.0.1:27017');
 const db = client.db('ARTIST_FINDER');
 
+async function getServices() {
+    
+    await client.connect()
+
+    const userServices = await db.collection('services').find().toArray();
+
+    return userServices
+}
+
 
 async function getServicesById(idService) {
     
@@ -25,7 +34,16 @@ async function getServicesByUserId(idUser) {
     return userServices
 }
 
+async function createService(service) {
+
+    await client.connect()
+
+    await db.collection('services').insertOne(service)
+}
+
 export {
+    getServices,
     getServicesById,
     getServicesByUserId,
+    createService
 }
