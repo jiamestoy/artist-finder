@@ -7,17 +7,35 @@ import { SessionProvider } from '../contexts/session.context'
 
 function LoginPage(){
     const [username, setUsername] = useState('')
+    const [usernameIsValid, setUsernameIsValid] = useState(false)
+    const [usernameError, setUsernameError] = useState('')
+
     const [password, setPassword] = useState('')
+    const [passwordIsValid, setPasswordIsValid] = useState(false)
+    const [passwordError, setPasswordError] = useState('')
+
     const [error, setError] = useState('')
 
     const navigate = useNavigate()
 
     const onChangeUsername = (event) =>{
         setUsername(event.target.value)
+        setUsernameIsValid(true)
+        setUsernameError('')
+        if (event.target.value == ''){
+            setUsernameIsValid(false)
+            setUsernameError('Debe ingresar su usuario.')
+        }
     }
 
     const onChangePassword = (event) =>{
         setPassword(event.target.value)
+        setPasswordIsValid(true)
+        setPasswordError('')
+        if (event.target.value == ''){
+            setPasswordIsValid(false)
+            setPasswordError('Debe ingresar su contraseña.')
+        }
     }
 
     useEffect(()=>{
@@ -26,20 +44,31 @@ function LoginPage(){
     }, [])
 
     const onSubmit = (event) =>{
-        event.preventDefault()
-
-        authService.login({username, password})
-        .then(({token, account})=>{
-            console.log("Sesion iniciada", {token, account})
-            
-            localStorage.setItem('token', token)
-
-            navigate('/', {replace: true})
-        })
-        .catch(e=>{
-            console.log("Error al iniciar sesion", error)
-            setError(e.error.message)
-        })
+        if(!usernameIsValid || !passwordIsValid) {
+            event.preventDefault()
+            setError('Verifique los campos.')
+            if(username == '') {
+                setUsernameError('Debe ingresar su usuario.')
+            }
+            if(password == ''){
+                setPasswordError('Debe ingresar su contraseña.')
+            }
+        } else {
+            event.preventDefault()
+    
+            authService.login({username, password})
+            .then(({token, account})=>{
+                console.log("Sesion iniciada", {token, account})
+                
+                localStorage.setItem('token', token)
+    
+                navigate('/', {replace: true})
+            })
+            .catch(e=>{
+                console.log("Error al iniciar sesion", error)
+                setError(e.error.message)
+            })
+        }
     }
 
     return(
@@ -52,12 +81,12 @@ function LoginPage(){
                         <div className="mb-3">
                         <label htmlFor="username" className="form-label">Nombre de Usuario:</label>
                         <input type="text" id="username" name="username" className="form-control" required onChange={onChangeUsername} value={username}/>
-                        <div className="invalid-feedback" id="username-feedback"></div>
+                        <div className="login-error">{usernameError}</div>
                         </div>
                         <div className="mb-3">
                         <label htmlFor="password" className="form-label">Password:</label>
                         <input type="password" id="password" name="password" className="form-control" required onChange={onChangePassword} value={password}/>
-                        <div className="invalid-feedback" id="password-feedback"></div>
+                        <div className="login-error">{passwordError}</div>
                         </div>
                         <a href="#">¿Olvidaste tu contraseña?</a>
                         <p className='login-error'>{error}</p>
