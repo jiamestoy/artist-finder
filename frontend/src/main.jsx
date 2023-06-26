@@ -8,6 +8,7 @@ import SignupPage from './pages/SignupPage'
 import ArtistProfile from './pages/ArtistProfile'
 import BuyerProfile from './pages/BuyerProfile'
 import SuccessPage from './pages/SuccessPage'
+import SuccessServicePage from './pages/SuccessServicePage'
 import AddService from './pages/AddService'
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: '/success',
     element: <SuccessPage />,
+  },
+  {
+    path: '/success-service',
+    element: <SuccessServicePage />,
   },
   {
     path: '/add-service/:idUser',

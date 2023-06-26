@@ -94,11 +94,11 @@ function ArtistsList({ list, listServices }){
             <div className="d-flex justify-content-center">
                 <div className='artist-list__list'>
                     <h2>Artistas</h2>
-                    {artists.map(artist => <ArtistsListItem key={artist._id} artist={artist} />)}
+                    {artists.length == 0? <p>No hay coincidencias</p> : artists.map(artist => <ArtistsListItem key={artist._id} artist={artist} />)}
                 </div>
                 <div className='artist-list__list'>
                     <h2>Servicios</h2>
-                    {services.map(service => <ServiceListItem key={service._id} service={service} />)}
+                    {services.length == 0? <p>No hay coincidencias</p> : services.map(service => <ServiceListItem key={service._id} service={service} />)}
                 </div>
             </div>
         </div>

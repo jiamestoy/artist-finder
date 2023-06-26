@@ -117,7 +117,7 @@ function AddService(){
 
             servicesService.createService({name, description, min_price, categories, artist_id})
             .then(()=>{
-                navigate('/success', {replace: true})
+                navigate('/success-service', {replace: true})
             }).catch(e=>{
                 setError(e.error.message)
                 console.log("Error al crear el servicio", e.error.message)
