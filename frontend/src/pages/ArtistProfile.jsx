@@ -38,7 +38,7 @@ function ArtistProfile(){
                             <p className="card-text">Categorias: {artist.categories? artist.categories.join(", ") : 'Sin categorías'}</p>
                             <div className="d-flex justify-content-between align-items-center p-2">
                                 <div className="d-flex flex-column">
-                                    <a className="card-text text-dark text-decoration-none" href="#reviews">Calificaciones: {averageScore} &#9733; </a> 
+                                    <a className="card-text text-dark text-decoration-none" href="#reviews">Calificaciones: {isNaN(averageScore) ? 'Sin calificaciones' : `${averageScore} \u2605`} </a> 
                                 </div>
                             </div>
                             <a href="#" className="btn btn-primary">Contactar</a>

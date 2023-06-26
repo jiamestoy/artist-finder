@@ -161,7 +161,7 @@ function AddService(){
                         <div className='register-error'>{minPriceError}</div>
                     </div>
                     <fieldset className="mb-3" id="radios">
-                        <legend className="text-center">Elegí la categoría:</legend>
+                        <legend className="text-center">Categoría:</legend>
                         <div className="d-flex justify-content-center">
                             {categoriesOptions.map((category) => (
                             <div className="mx-3" key={category._id}>
@@ -175,10 +175,10 @@ function AddService(){
                         {selectedCategory ? (
                         <div className="justify-content-center">
                             <div>
-                            <p>Elegí el tipo</p>
-                            {categoriesOptions.map((category) => (
+                                <legend className="text-center">Materiales:</legend>
+                                {categoriesOptions.map((category) => (
                                 <div className="d-flex justify-content-center" key={category._id}>
-                                {selectedCategory === category.name && category.type.map((type) => (
+                                    {selectedCategory === category.name && category.type.map((type) => (
                                     <div className="form-check" key={type}>
                                     <input type="checkbox" id={`subcategory${type}`} name={type} className="form-check-input" value={type} onChange={onChangeSubcategories} />
                                     <label htmlFor={`subcategory${type}`} className="form-check-label">{type}</label>
@@ -189,13 +189,13 @@ function AddService(){
                             </div>
 
                             <div>
-                            <p>Elegí los estilos</p>
-                            {categoriesOptions.map((category) => (
+                                <legend className="text-center">Estilos:</legend>
+                                {categoriesOptions.map((category) => (
                                 <div className="d-flex justify-content-center" key={category._id}>
-                                {selectedCategory === category.name && category.style.map((style) => (
+                                    {selectedCategory === category.name && category.style.map((style) => (
                                     <div className="form-check" key={style}>
-                                    <input type="checkbox" id={`subcategory${style}`} name={style} className="form-check-input" value={style} onChange={onChangeSubcategories} />
-                                    <label htmlFor={`subcategory${style}`}  className="form-check-label">{style}</label>
+                                        <input type="checkbox" id={`subcategory${style}`} name={style} className="form-check-input" value={style} onChange={onChangeSubcategories} />
+                                        <label htmlFor={`subcategory${style}`}  className="form-check-label">{style}</label>
                                     </div>
                                 ))}
                                 </div>
