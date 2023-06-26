@@ -24,9 +24,6 @@ function MainNav(){
                     <li className="nav-item">
                         <Link className="nav-link" to="/artists">Buscar</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/buyers">Compradores</Link>
-                    </li>
                     {
                     localStorage.getItem('token') ? 
                     <div className='d-flex'>

@@ -10,21 +10,20 @@ import BuyerProfile from './pages/BuyerProfile'
 import SuccessPage from './pages/SuccessPage'
 import SuccessServicePage from './pages/SuccessServicePage'
 import AddService from './pages/AddService'
+import RoutePrivate from './components/RoutePrivate'
+import Error404Page from './pages/Error404Page'
 
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, Route, RouterProvider} from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
     path: '/',
+    errorElement: <Error404Page />,
     element: <App />,
   },
   {
     path: '/artists',
     element: <ArtistsListPage />,
-  },
-  {
-    path: '/buyers',
-    element: <BuyersListPage />,
   },
   {
     path: '/login',
@@ -45,15 +44,15 @@ const router = createBrowserRouter([
   },
   {
     path: '/success',
-    element: <SuccessPage />,
+    element: <RoutePrivate><SuccessPage /></RoutePrivate>,
   },
   {
     path: '/success-service',
-    element: <SuccessServicePage />,
+    element: <RoutePrivate><SuccessServicePage /></RoutePrivate>,
   },
   {
     path: '/add-service/:idUser',
-    element: <AddService />,
+    element: <RoutePrivate><AddService /></RoutePrivate>,
   },
 ])
 
