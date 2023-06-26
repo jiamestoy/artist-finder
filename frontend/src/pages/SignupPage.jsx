@@ -127,7 +127,7 @@ function SignupPage(){
                 })
             }).catch(e=>{
                 setError(e.error.message)
-                console.log("Error al registrarse", e.error.message)
+                console.log("Error al registrarse:", e.error.message)
             })
         } else {
             event.preventDefault()
