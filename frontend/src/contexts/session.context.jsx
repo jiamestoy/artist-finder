@@ -27,12 +27,12 @@ function SessionProvider({children}){
         localStorage.removeItem('token')
     }, [])
 
-    if (localStorage.getItem('token')) {
-        useEffect(() => {
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
             usersService.getCurrent()
             .then(profile => setProfile(profile))
-        }, [])
-    }
+        }
+    }, [])
 
     return (
         <SessionContext.Provider value={{profile, onLogout}}>
