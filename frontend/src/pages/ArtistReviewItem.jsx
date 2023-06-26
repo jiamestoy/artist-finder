@@ -5,56 +5,56 @@ function ArtistReviewItem({review}){
 
         if (score == 5) {
             return <div>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
             </div>
         } else if (
             score == 4) {
             return <div>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star-o"></i>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
             </div>
         } else if (
             score == 3) {
             return <div>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
             </div>
         } else if (
             score == 2) {
             return <div>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
             </div>
         } else if (
             score == 1) {
             return <div>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
+                <span>&#9733;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
             </div>
         } else if (
             score == 0) {
             return <div>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
-            <i className="fa fa-star-o"></i>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
+                <span>&#9734;</span>
             </div>
         }
     }

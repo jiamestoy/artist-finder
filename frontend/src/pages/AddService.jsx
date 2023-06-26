@@ -113,8 +113,6 @@ function AddService(){
             const artist_id = idUser
             const min_price = minPrice
 
-            console.log(categories)
-
             servicesService.createService({name, description, min_price, categories, artist_id})
             .then(()=>{
                 navigate('/success-service', {replace: true})

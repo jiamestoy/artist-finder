@@ -5,10 +5,27 @@ import ArtistReviewItem from './ArtistReviewItem'
 
 
 
-function ArtistsReviews(){
+function ArtistsReviews({ onAverageScore }){
     
     const {idUser} = useParams()
     const [reviews, setReviews] = useState([])
+
+
+    useEffect(() => {
+        const averageScore = calculateAverageScore(reviews)
+        onAverageScore(averageScore);
+    }, [onAverageScore]);
+
+    function calculateAverageScore(reviews) {
+
+        let partialScore = 0;
+
+        reviews.map((review) => (partialScore += review.score))
+    
+        let finalScore = partialScore / reviews.length;
+
+        return finalScore;
+    }
 
     useEffect(()=>{
         servicesReviews.getReviewsByUserId(idUser)

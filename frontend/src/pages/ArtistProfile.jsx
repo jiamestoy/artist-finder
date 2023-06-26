@@ -13,6 +13,12 @@ function ArtistProfile(){
     const [artist, setArtist] = useState({})
     const {idUser} = useParams()
 
+    const [averageScore, setAverageScore] = useState();
+
+    const handleAverageScore = (score) => {
+        setAverageScore(score);
+    };
+
     useEffect(()=>{
         usersService.getUserById(idUser)
         .then(artist=>{
@@ -32,7 +38,7 @@ function ArtistProfile(){
                             <p className="card-text">Categorias: {artist.categories? artist.categories.join(", ") : 'Sin categorías'}</p>
                             <div className="d-flex justify-content-between align-items-center p-2">
                                 <div className="d-flex flex-column">
-                                    <a className="card-text text-dark text-decoration-none" href={`/user/${artist._id}/#reviews"`}>Calificaciones: </a> 
+                                    <a className="card-text text-dark text-decoration-none" href="#reviews">Calificaciones: {averageScore} &#9733; </a> 
                                 </div>
                             </div>
                             <a href="#" className="btn btn-primary">Contactar</a>
@@ -77,7 +83,7 @@ function ArtistProfile(){
 
                         <div className="p-4 mb-4 border rounded" id="reviews">
                             <h2 className="fs-4 fw-semibold" id="calificaciones">Calificaciones</h2>
-                            <ArtistReviews />
+                            <ArtistReviews onAverageScore={handleAverageScore} />
                         </div>
 
                     </div>
