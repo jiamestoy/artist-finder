@@ -7,9 +7,11 @@ function Error404Page() {
     return (
       <SessionProvider>
         <MainNav/>
-        <div>
+        <main className="container-lg">
+          <div>
             <h1 className="container-lg">Página no encontrada.</h1>
-        </div>
+          </div>
+        </main>
         <Footer/>
       </SessionProvider>
   )

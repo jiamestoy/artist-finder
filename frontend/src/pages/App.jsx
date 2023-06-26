@@ -7,9 +7,11 @@ function App() {
     return (
       <SessionProvider>
         <MainNav/>
-        <div>
-            <h1 className="container-lg">Home</h1>
-        </div>
+        <main className="container-lg">
+          <div>
+              <h1 className="container-lg">Home</h1>
+          </div>
+        </main>
         <Footer/>
       </SessionProvider>
   )

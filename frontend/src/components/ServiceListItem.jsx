@@ -12,7 +12,7 @@ function ServiceListItem({service}) {
                     <h5 className="card-title">{service.name}</h5>
                     <p className="card-text">Desde: ${service.min_price}</p>
                     <p className="card-text">Categorias: {service.categories.join(", ")}</p>
-                    <Link to={`/artist/${service.artist_id}`} className="btn btn-primary">Ver Artista</Link>
+                    <Link to={`/artist/${service.artist_id}`} className="btn btn-primary">Ver Servicio</Link>
                 </div>
             </div>
         </div>

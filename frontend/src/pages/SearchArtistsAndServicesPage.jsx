@@ -27,10 +27,12 @@ function SearchArtistsAndServicesPage(){
     return (
         <SessionProvider>
             <MainNav/>
-            <div>
-                <h1 className="container-lg">Buscar</h1>
-                <SearchArtistsAndServices list={artists} listServices={services} />
-            </div>
+            <main className="container-lg">
+                <div>
+                    <h1 className="container-lg">Buscar</h1>
+                    <SearchArtistsAndServices list={artists} listServices={services} />
+                </div>
+            </main>
             <Footer/>
         </SessionProvider>
     )
