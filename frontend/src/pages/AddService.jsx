@@ -6,6 +6,7 @@ import categoriesService from '../services/categories.service'
 import MainNav from '../components/MainNav'
 import { SessionProvider } from '../contexts/session.context'
 import { useParams } from "react-router-dom"
+import Footer from '../components/Footer'
 
 function AddService(){
 
@@ -210,6 +211,7 @@ function AddService(){
                     <button type="submit" className="register-button align-self-center w-50" id="register-button">Crear Servicio</button>
                 </form>
             </div>
+            <Footer/>
         </SessionProvider>
     )
 }

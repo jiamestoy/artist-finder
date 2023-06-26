@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './pages/App'
-import ArtistsListPage from './pages/ArtistsListPage'
-import BuyersListPage from './pages/BuyersListPage'
+import SearchArtistsAndServicesPage from './pages/SearchArtistsAndServicesPage'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
-import ArtistProfile from './pages/ArtistProfile'
+import ArtistProfile from './components/ArtistProfile'
 import BuyerProfile from './pages/BuyerProfile'
 import SuccessPage from './pages/SuccessPage'
 import SuccessServicePage from './pages/SuccessServicePage'
@@ -22,8 +21,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/artists',
-    element: <ArtistsListPage />,
+    path: '/search',
+    element: <SearchArtistsAndServicesPage />,
   },
   {
     path: '/login',

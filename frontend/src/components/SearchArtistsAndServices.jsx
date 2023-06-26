@@ -2,10 +2,9 @@ import PropTypes from 'prop-types'
 import ArtistsListItem from './ArtistsListItem.jsx'
 import ServiceListItem from './ServiceListItem.jsx'
 import { useState, useEffect } from 'react'
-import categoriesService from '../services/categories.service'
+import categoriesService from '../services/categories.service.js'
 
-
-function ArtistsList({ list, listServices }){
+function SearchArtistsAndServices({ list, listServices }){
   const [artists, setArtists] = useState(list)
   const [services, setServices] = useState(listServices)
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -147,8 +146,8 @@ function ArtistsList({ list, listServices }){
   );    
 }
 
-ArtistsList.propTypes = {
+SearchArtistsAndServices.propTypes = {
     list: PropTypes.array.isRequired
 }
 
-export default ArtistsList;
+export default SearchArtistsAndServices;

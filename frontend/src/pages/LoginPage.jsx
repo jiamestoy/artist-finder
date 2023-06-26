@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import authService from '../services/auth.service.js'
 import MainNav from '../components/MainNav'
 import { SessionProvider } from '../contexts/session.context'
+import Footer from '../components/Footer'
 
 function LoginPage(){
     const [username, setUsername] = useState('')
@@ -94,6 +95,7 @@ function LoginPage(){
                     </form>
                 </div>
             </div>
+            <Footer/>
         </SessionProvider>
     )
 }

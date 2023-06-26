@@ -1,5 +1,6 @@
 import MainNav from "../components/MainNav"
 import { SessionProvider } from "../contexts/session.context"
+import Footer from "../components/Footer"
 
 function Error404Page() {
 
@@ -9,6 +10,7 @@ function Error404Page() {
         <div>
             <h1 className="container-lg">Página no encontrada.</h1>
         </div>
+        <Footer/>
       </SessionProvider>
   )
 }

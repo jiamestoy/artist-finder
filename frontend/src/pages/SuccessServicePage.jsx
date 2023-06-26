@@ -1,5 +1,6 @@
 import MainNav from "../components/MainNav"
 import { SessionProvider } from "../contexts/session.context"
+import Footer from "../components/Footer"
 
 function SuccessServicePage(){
     
@@ -10,6 +11,7 @@ function SuccessServicePage(){
                 <img src="imgs/success.png" alt="Símbolo de correcto" className="mw-100 my-3" />
                 <h1 className="text-center">¡Servicio creado con éxito!</h1>
             </div>
+            <Footer/>
         </SessionProvider>
     )
 }

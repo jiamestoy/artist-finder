@@ -5,6 +5,7 @@ import usersService from '../services/users.service.js'
 import authService from '../services/auth.service'
 import MainNav from '../components/MainNav'
 import { SessionProvider } from '../contexts/session.context'
+import Footer from '../components/Footer'
 
 function SignupPage(){
     const [username, setUsername] = useState('')
@@ -195,6 +196,7 @@ function SignupPage(){
                     <button type="submit" className="register-button align-self-center w-50" id="register-button">Crear Cuenta</button>
                 </form>
             </div>
+            <Footer/>
         </SessionProvider>
     )
 }

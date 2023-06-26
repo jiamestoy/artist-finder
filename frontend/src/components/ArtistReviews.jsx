@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import servicesReviews from '../services/reviews.service.js'
-import ArtistReviewItem from './ArtistReviewItem'
+import ArtistReviewItem from './ArtistReviewItem.jsx'
 
 
 

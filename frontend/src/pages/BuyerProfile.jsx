@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom"
 import {useState, useEffect} from 'react'
 import usersService from "../services/users.service"
-import UserDegree from './UserDegree'
-import UserSocialNetwork from './UserSocialNetwork'
-import BuyerPurchasedServices from "./BuyerPurchasedServices"
-import BuyerFavorites from "./BuyerFavorites"
+import UserDegree from '../components/UserDegree'
+import UserSocialNetwork from '../components/UserSocialNetwork'
+import BuyerPurchasedServices from "../components/BuyerPurchasedServices"
+import BuyerFavorites from "../components/BuyerFavorites"
 import MainNav from "../components/MainNav"
 import { SessionProvider } from "../contexts/session.context"
+import Footer from "../components/Footer"
 
 function BuyerProfile(){
     const [buyer, setBuyer] = useState({})
@@ -71,6 +72,7 @@ function BuyerProfile(){
                     </div>
                 </div>
             </main>
+            <Footer/>
         </SessionProvider>
     )
 }

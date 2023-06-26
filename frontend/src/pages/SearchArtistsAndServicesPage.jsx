@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"
-import ArtistsList from './ArtistsList'
+import SearchArtistsAndServices from '../components/SearchArtistsAndServices'
 import usersService from '../services/users.service'
 import servicesService from "../services/services.service"
 import MainNav from "../components/MainNav"
 import { SessionProvider } from "../contexts/session.context"
+import Footer from "../components/Footer"
 
 
 
-function ArtistsListPage(){
+function SearchArtistsAndServicesPage(){
     const [artists, setArtists] = useState([])
     const [services, setServices] = useState([])
 
@@ -28,10 +29,11 @@ function ArtistsListPage(){
             <MainNav/>
             <div>
                 <h1 className="container-lg">Buscar</h1>
-                <ArtistsList list={artists} listServices={services} />
+                <SearchArtistsAndServices list={artists} listServices={services} />
             </div>
+            <Footer/>
         </SessionProvider>
     )
 }
 
-export default ArtistsListPage
+export default SearchArtistsAndServicesPage

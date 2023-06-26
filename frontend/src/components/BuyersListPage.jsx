@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import BuyersList from './BuyersList'
 import usersService from '../services/users.service'
-import MainNav from '../components/MainNav';
+import MainNav from './MainNav';
 import { SessionProvider } from '../contexts/session.context';
+import Footer from './Footer';
 
 function ShowBuyersList() {
 
@@ -21,6 +22,7 @@ function ShowBuyersList() {
             <h1 className="container-lg">Compradores</h1>
             {buyers.map(buyer => <BuyersList key={buyer._id} buyer={buyer} />)}
         </div>
+        <Footer/>
       </SessionProvider>
     )
 }

@@ -6,8 +6,9 @@ import ArtistPortfolio from './ArtistPortfolio'
 import ArtistReviews from './ArtistReviews'
 import UserDegree from './UserDegree'
 import UserSocialNetwork from './UserSocialNetwork'
-import MainNav from "../components/MainNav"
+import MainNav from "./MainNav"
 import { SessionProvider } from "../contexts/session.context"
+import Footer from "./Footer"
 
 function ArtistProfile(){
     const [artist, setArtist] = useState({})
@@ -89,6 +90,7 @@ function ArtistProfile(){
                     </div>
                 </div>
             </main>
+            <Footer/>
         </SessionProvider>
     )
 }
