@@ -1,7 +1,7 @@
 import API from './api.service'
 
 async function getCategories() {
-    return API.call({ uri: `categories/all` })
+    return API.call({ uri: `categories` })
 }
 
 export {

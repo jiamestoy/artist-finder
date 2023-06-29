@@ -1,7 +1,7 @@
 import API from './api.service'
 
 async function getReviewsByUserId(idUser) {
-    return API.call({ uri: `reviews/${idUser}` })
+    return API.call({ uri: `users/${idUser}/reviews` })
 }
 
 
