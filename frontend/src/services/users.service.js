@@ -1,11 +1,11 @@
 import API from './api.service'
 
 async function getArtists() {
-    return API.call({ uri: 'users/artist' })
+    return API.call({ uri: 'users/role/artist' })
 }
 
 async function getBueyers() {
-    return API.call({ uri: 'users/buyer' })
+    return API.call({ uri: 'users/role/buyer' })
 }
 
 async function getUserById(idUser) {

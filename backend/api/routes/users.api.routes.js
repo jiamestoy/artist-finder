@@ -10,7 +10,7 @@ import { tokenVerify } from '../../middlewares/token.validate.middleware.js'
 const route = Router()
 
 route.post('/users', [validateUser], controllerUser.createUser)
-route.get('/users/:role', controllerUser.getUsers)
+route.get('/users/role/:role', controllerUser.getUsers)
 route.get('/user/:idUser', controllerUser.getUsersById)
 route.get('/users/services', controllerServices.getServices)
 route.post('/users/services', [validateService], controllerServices.addService)
