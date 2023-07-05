@@ -2,11 +2,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75px;
-    background-color: #D66724;
-    color: #0f0f0f;
+    background-color: #1E3351;
+    height: 250px;
 }
 
-.footer p {
-    margin: 0;
+.footer img {
+    margin-right: 2.5rem;
+}
+
+.footer-links {
+    color: white;
+    display: flex;
+    padding-left: 2.5rem;
+    border-left: solid 0.1rem white;
+}
+
+.footer-links p {
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-links-artistas {
+    margin-right: 2.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
 }

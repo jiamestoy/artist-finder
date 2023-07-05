@@ -1,0 +1,118 @@
+.navbar {
+    background-color: white;
+    font-weight: bold;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color:#1E3351;
+}
+
+.nav-item {
+    margin-left: 2rem;
+    margin-right: 4rem;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: solid 3px;
+    border-radius: 2rem 0 0 2rem;
+    border-color: #1E3351;
+    width: 250px;
+    height: 2.5rem;
+    box-sizing: border-box;
+    margin-left: 4rem
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    border: none;
+    outline: none;
+    background-color: #1E3351;
+    padding: 0.5rem;
+    border-radius: 0 2rem 2rem 0;
+    height: 2.5rem;
+    cursor: pointer;
+    margin-right: 2rem
+}
+
+.search-button:active {
+    border-style: outset;
+}
+
+.search-button:focus {
+    border: none;
+    outline: none;
+}
+
+.search-button img {
+    height: 20px;
+}
+
+.orange-button, .white-button {
+    text-decoration: none;
+    border: 3px solid #E96724;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.orange-button {
+    background-color:#E96724;
+}
+
+.white-button {
+    margin-right: 1rem;
+}
+
+.orange-button a {
+    color: white;
+}
+
+.white-button a {
+    color:#E96724;
+}
+
+.navbar-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #E96724;
+    margin: 0 1rem 0 1rem;
+}
+
+.navbar-artist {
+    display: flex;
+    align-items: center;
+}
+
+.message-icon {
+    margin-right: 1rem;
+}
