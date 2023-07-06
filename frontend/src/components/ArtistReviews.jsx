@@ -41,7 +41,7 @@ function ArtistsReviews({ onAverageScore }){
     }, [])
 
     return (
-        <div className="row gx-2 mt-3">
+        <div className="reviews-container">
             {reviews.length != 0 ? reviews.map(review => <ArtistReviewItem key={review.author_id} review={review} />) : <p>Este artista todavía no fue calificado.</p>}
         </div>
     )

@@ -29,7 +29,6 @@ function SearchArtistsAndServicesPage(){
             <MainNav/>
             <main className="container-lg">
                 <div>
-                    <h1 className="container-lg">Buscar</h1>
                     <SearchArtistsAndServices list={artists} listServices={services} />
                 </div>
             </main>

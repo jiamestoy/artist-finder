@@ -1,0 +1,46 @@
+.search-page-container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    align-self: flex-start;
+}
+
+.search-form,
+.search-results {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.search-results {
+    width: 850px
+}
+
+.artists-button, .services-button {
+    border: 3px solid #E96724;
+    padding: 0.5rem;
+    color: #E96724;
+    background-color: white;
+}
+
+
+.artists-button {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.services-button {
+    border-radius: 0 2rem 2rem 0;
+}
+
+.artists-button:focus,
+.services-button:focus {
+    color: white;
+    background-color: #E96724;
+    outline: none;
+}
+
+.search-result-list {
+    display: flex;
+    flex-wrap: wrap;
+}

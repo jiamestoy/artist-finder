@@ -3,6 +3,7 @@ import ArtistsListItem from './ArtistsListItem.jsx'
 import ServiceListItem from './ServiceListItem.jsx'
 import { useState, useEffect } from 'react'
 import categoriesService from '../services/categories.service.js'
+import './SearchArtistsAndServices.css'
 
 function SearchArtistsAndServices({ list, listServices }){
   const [artists, setArtists] = useState(list)
@@ -39,6 +40,16 @@ function SearchArtistsAndServices({ list, listServices }){
         
       setServices(servicesFilter)
   }
+
+  const [showArtists, setShowArtists] = useState(true);
+
+  const handleShowArtists = () => {
+    setShowArtists(true);
+  };
+
+  const handleShowServices = () => {
+    setShowArtists(false);
+  };
   
   const onChangeFilterCategory = (event) => {
       const selectedCategory = event.target.value;
@@ -72,76 +83,88 @@ function SearchArtistsAndServices({ list, listServices }){
   }, [list, listServices, selectedCategories]);
 
   return (
-    <div className="artist-list">
-      <div className="d-flex">
-        <form className="artist-list__form">
-          <input
-            id="filtro"
-            className="artist-list__filter form-control"
-            type="text"
-            onChange={onChangeFilter}
-          />
-          <fieldset className="mb-3">
-            <legend className="text">Categorías</legend>
+    <div className="search-page-container">
+      <form className="search-form">
+        <h2>Filtrar</h2>
+        <input
+          id="filtro"
+          className="artist-list__filter form-control"
+          type="text"
+          onChange={onChangeFilter}
+        />
+        <fieldset className="mb-3">
+          <legend className="text">Categorías</legend>
+          <div>
+            {categories.map((category) => (
+              <div key={category._id}>
+                <input type="checkbox" id={`category${category.name}`} name="categories" value={category.name} className="form-check-input" checked={selectedCategories.includes(category.name)} onChange={onChangeFilterCategory} />
+                <label htmlFor={`category${category.name}`} className="form-check-label" >{category.name}</label>
+              </div>
+            ))}
+          </div>
+          <div className="justify-content-center">
+            {categories.map((category) => (
+              <div key={category._id}>
+                <legend>Tipo de {category.name}</legend>
+                {category.type.map((type) => (
+                  <div className="form-check" key={type}>
+                    <input type="checkbox" id={`subcategory${type}`} name='categories' className="form-check-input" value={type} checked={selectedCategories.includes(type)} onChange={onChangeFilterCategory} />
+                    <label htmlFor={`subcategory${type}`}className="form-check-label">{type}</label>
+                  </div>
+                ))}
+              </div>
+            ))}
             <div>
               {categories.map((category) => (
                 <div key={category._id}>
-                  <input type="checkbox" id={`category${category.name}`} name="categories" value={category.name} className="form-check-input" checked={selectedCategories.includes(category.name)} onChange={onChangeFilterCategory} />
-                  <label htmlFor={`category${category.name}`} className="form-check-label" >{category.name}</label>
-                </div>
-              ))}
-            </div>
-            <div className="justify-content-center">
-              {categories.map((category) => (
-                <div key={category._id}>
-                  <legend>Tipo de {category.name}</legend>
-                  {category.type.map((type) => (
-                    <div className="form-check" key={type}>
-                      <input type="checkbox" id={`subcategory${type}`} name='categories' className="form-check-input" value={type} checked={selectedCategories.includes(type)} onChange={onChangeFilterCategory} />
-                      <label htmlFor={`subcategory${type}`}className="form-check-label">{type}</label>
+                  <legend>Estilo de {category.name}</legend>
+                  {category.style.map((style)  => (
+                    <div className="form-check" key={style}>
+                      <input type="checkbox" id={`subcategory${style}`} name='categories' className="form-check-input" value={style} checked={selectedCategories.includes(style)} onChange={onChangeFilterCategory} />
+                      <label htmlFor={`subcategory${style}`} className="form-check-label">{style}</label>
                     </div>
                   ))}
                 </div>
               ))}
-              <div>
-                {categories.map((category) => (
-                  <div key={category._id}>
-                    <legend>Estilo de {category.name}</legend>
-                    {category.style.map((style)  => (
-                      <div className="form-check" key={style}>
-                        <input type="checkbox" id={`subcategory${style}`} name='categories' className="form-check-input" value={style} checked={selectedCategories.includes(style)} onChange={onChangeFilterCategory} />
-                        <label htmlFor={`subcategory${style}`} className="form-check-label">{style}</label>
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
             </div>
-          </fieldset>
-        </form>
-        <div className="d-flex justify-content-center">
-          <div className="artist-list__list px-5">
-            <h2>Artistas</h2>
-            {artists.length === 0 ? (
-              <p>No hay coincidencias</p>
-            ) : (
-              artists.map((artist) => (
-                <ArtistsListItem key={artist._id} artist={artist} />
-              ))
-            )}
           </div>
-          <div className="artist-list__list px-5">
-            <h2>Servicios</h2>
-            {services.length === 0 ? (
-              <p>No hay coincidencias</p>
-            ) : (
-              services.map((service) => (
-                <ServiceListItem key={service._id} service={service} />
-              ))
-            )}
-          </div>
-        </div>
+        </fieldset>
+      </form>
+      <div className="search-results">
+
+      <div>
+        <button autoFocus className={`artists-button ${showArtists ? 'active' : ''}`} onClick={handleShowArtists}>
+          Buscar Artistas
+        </button>
+        <button className={`services-button ${!showArtists ? 'active' : ''}`} onClick={handleShowServices}>
+          Buscar Servicios
+        </button>
       </div>
+
+        
+        {showArtists ? (
+          <div className="search-result-list">
+              {artists.length === 0 ? (
+              <p>No hay coincidencias</p>
+              ) : (
+              artists.map((artist) => (
+              <ArtistsListItem key={artist._id} artist={artist} />
+              ))
+            )}
+          </div>
+          ) : (
+          <div className="search-result-list">
+              {services.length === 0 ? (
+              <p>No hay coincidencias</p>
+              ) : (
+              services.map((service) => (
+              <ServiceListItem key={service._id} service={service} />
+              ))
+            )}
+          </div>
+        )}
+      </div>
+
     </div>
   );    
 }

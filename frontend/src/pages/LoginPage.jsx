@@ -75,26 +75,24 @@ function LoginPage(){
     return(
         <SessionProvider>
             <MainNav/>
-            <main className="container-lg">
-                <div className='login-page'>
-                    <div className="container w-50 my-3 p-3 border rounded d-flex flex-column">
-                        <h1 className="mb-3 align-self-center">Login</h1>
-                        <form className="d-flex flex-column" id="login-form" noValidate onSubmit={onSubmit}>
-                            <div className="mb-3">
+            <main className="login-page-content">
+                <div>
+                    <h1>Login</h1>
+                    <form className="d-flex flex-column" id="login-form" noValidate onSubmit={onSubmit}>
+                        <div className="input-container">
                             <label htmlFor="username" className="form-label">Nombre de Usuario:</label>
                             <input type="text" id="username" name="username" className="form-control" required onChange={onChangeUsername} value={username}/>
-                            <div className="login-error">{usernameError}</div>
-                            </div>
-                            <div className="mb-3">
+                        <div className="login-error">{usernameError}</div>
+                        </div>
+                        <div className="input-container">
                             <label htmlFor="password" className="form-label">Password:</label>
                             <input type="password" id="password" name="password" className="form-control" required onChange={onChangePassword} value={password}/>
-                            <div className="login-error">{passwordError}</div>
-                            </div>
-                            <a href="#">¿Olvidaste tu contraseña?</a>
-                            <p className='login-error'>{error}</p>
-                            <button type="submit" className="login-button align-self-center w-50" id="login-button">Iniciar Sesión</button>
-                        </form>
-                    </div>
+                        <div className="login-error">{passwordError}</div>
+                        </div>
+                        <a className="forgot-password" href="#">¿Olvidaste tu contraseña?</a>
+                        <p className='login-error'>{error}</p>
+                        <button type="submit" className="login-button align-self-center w-50" id="login-button">Iniciar Sesión</button>
+                    </form>
                 </div>
             </main>
             <Footer/>

@@ -1,0 +1,6 @@
+.portfolio-container,
+.services-container,
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,3 +1,33 @@
+.signup-page-container {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 15px auto 15px auto;
+    padding: 2rem;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-page-container h1 {
+    text-align: center;
+    color:#e96724
+}
+
+.role-input-container {
+    border: none;
+    margin: 1rem auto 1rem auto;
+}
+
+.role-input-container legend {
+    color:#e96724;
+    font-weight: bold;
+}
+
+.role-options {
+    display: flex;
+    margin-top: 1rem;
+}
+
 .register-button{
     text-align: center;
     vertical-align: middle;

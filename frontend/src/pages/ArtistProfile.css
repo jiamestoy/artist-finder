@@ -1,0 +1,80 @@
+.container {
+    width: 960px;
+    margin: auto;
+    display: flex;
+}
+
+.avatar-name-container,
+.artist-details,
+.additional-containers {
+    margin:1rem;
+}
+
+.avatar-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E3351;
+    color:white;
+    border-radius: 1rem;
+    height: 455px;
+    width: 350px;
+}
+
+.profile-avatar {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #E96724;
+    margin: 0 1rem 0 1rem;
+    object-fit: cover;
+    object-position: center center; 
+}
+
+.rating {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-button {
+    text-decoration: none;
+    color: white;
+    background-color: #E96724;
+    border: 3px solid #E96724;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.artist-details {
+    background: white;
+    border-radius: 1rem;
+    width: 350px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.description {
+    border-bottom: solid black 1px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+.artist-details ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional-containers {
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    width: 632px;
+}

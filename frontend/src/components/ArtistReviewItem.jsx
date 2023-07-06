@@ -60,16 +60,13 @@ function ArtistReviewItem({review}){
     }
 
     return (
-        <div className="col-lg-4 mt-2">
-            <div className="card p-2">
-                <a href="#"><img src="../imgs/service_placeholder.webp" alt="Servicio" className="card-img-top rounded" /></a>
-                <div className="card-body p-0">
-                    <a href="#" className="link-dark link-underline-opacity-0 link-hover"><p className="card-text"><strong>{review.author_username}</strong></p></a>
-                        <p className="card-text mt-2">{review.comment}</p>
-        
-                        <div className="border-top d-flex justify-content-between align-items-center p-2">
-                            {showScore(review.score)}
-                        </div>
+        <div className="artist-card">
+            <a href="#"><img src="../imgs/service_placeholder.webp" alt="Servicio" className="service-img" /></a>
+            <div className="card-body">
+            <a href="#" className="link-dark link-underline-opacity-0 link-hover"><p className="card-text"><strong>{review.author_username}</strong></p></a>
+                <p className="card-text mt-2">{review.comment}</p>
+                <div className="border-top d-flex justify-content-between align-items-center p-2">
+                    {showScore(review.score)}
                 </div>
             </div>
         </div>

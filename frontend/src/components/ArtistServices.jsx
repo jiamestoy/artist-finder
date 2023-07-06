@@ -18,7 +18,7 @@ function ArtistServices(){
     }, [])
     
     return (
-        <div className="row gx-2 mt-3">
+        <div className="services-container">
             {services.length != 0 ? services.map(service => <ArtistServicesItem key={service._id} service={service} />) : <p>Este artista todavía no tiene servicios cargados.</p>}
         </div>
     )
