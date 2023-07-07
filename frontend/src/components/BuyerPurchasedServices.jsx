@@ -19,7 +19,7 @@ function BuyerPurchasedServices({purchase}){
                     <div className="row">
                         <div className="col-4 d-flex align-items-center">
                             <a href="#">
-                                <img className="card-img" src={`../imgs/${servicePurchased.img ? servicePurchased.img : 'service_placeholder.webp'}`} alt={`Imagen de ${servicePurchased.name}`} />
+                                <img className="card-img" src={`../imgs/${servicePurchased.img ? servicePurchased.img : 'service_placeholder.jpg'}`} alt={`Imagen de ${servicePurchased.name}`} />
                             </a>
                         </div>
                         <div className="col-8">

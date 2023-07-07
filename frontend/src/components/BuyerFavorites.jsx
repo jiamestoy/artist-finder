@@ -16,7 +16,7 @@ function BuyerFavorites({favorite}){
         <div className="row gx-2 mt-3">
             <div className="col-lg-4 mt-2">
                 <div className="card p-2"> 
-                    <a href="#"><img className="card-img-top rounded" src={`../imgs/${favoriteService.img ? favoriteService.img : 'service_placeholder.webp'}`} alt={`Imagen de ${favoriteService.name}`} /></a>
+                    <a href="#"><img className="card-img-top rounded" src={`../imgs/${favoriteService.img ? favoriteService.img : 'service_placeholder.jpg'}`} alt={`Imagen de ${favoriteService.name}`} /></a>
                     <div className="card-body p-0">
                         <a href="#" className="link-dark link-underline-opacity-0 link-hover">
                             <h4 className="card-title fs-5 fw-semibold mb-0 mt-2">{favoriteService.name}</h4>

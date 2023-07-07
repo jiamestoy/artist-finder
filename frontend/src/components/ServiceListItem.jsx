@@ -8,7 +8,7 @@ function ServiceListItem({service}) {
 
         <Link to={`/artist/${service.artist_id}`}>
         <div className="artist-card">
-            <img className='artwork-img' src={`../imgs/${service.img ? service.img : 'service_placeholder.webp'}`} alt={`Imagen de ${service.name}`} />
+            <img className='artwork-img' src={`../imgs/${service.img ? service.img : 'service_placeholder.jpg'}`} alt={`Imagen de ${service.name}`} />
             <div>
                 <h4>{service.name}</h4>
                 <p className="card-text">Categorias: {service.categories.join(", ")}</p>

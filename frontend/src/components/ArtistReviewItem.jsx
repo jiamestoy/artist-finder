@@ -61,7 +61,7 @@ function ArtistReviewItem({review}){
 
     return (
         <div className="artist-card">
-            <a href="#"><img src="../imgs/service_placeholder.webp" alt="Servicio" className="service-img" /></a>
+            <a href="#"><img src="../imgs/service_placeholder.jpg" alt="Servicio" className="service-img" /></a>
             <div className="card-body">
             <a href="#" className="link-dark link-underline-opacity-0 link-hover"><p className="card-text"><strong>{review.author_username}</strong></p></a>
                 <p className="card-text mt-2">{review.comment}</p>
