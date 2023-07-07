@@ -7,6 +7,7 @@ import MainNav from '../components/MainNav'
 import { SessionProvider } from '../contexts/session.context'
 import { useParams } from "react-router-dom"
 import Footer from '../components/Footer'
+import './AddService.css'
 
 function AddService(){
 
@@ -143,75 +144,71 @@ function AddService(){
     return(
         <SessionProvider>
             <MainNav/>
-            <main className="container-lg">
-                <div className="container w-75 my-3 p-3 border rounded d-flex flex-column">
-                    <h1 className="mb-3 align-self-center">Agregar un Servicio Nuevo</h1>
-                    <form className="d-flex flex-column" id="add-service-form" noValidate onSubmit={onSubmit}>
-                        <div className="mb-3">
-                            <label htmlFor="name" className="form-label">Nombre del Servicio:</label>
-                            <input type="text" id="name" name="name" className='form-control' required onChange={onChangeName} value={name} />
-                            <div className='register-error'>{nameError}</div>
+            <main className="signup-page-container">
+                <h1 className="mb-3 align-self-center">Agregar un Servicio Nuevo</h1>
+                <form id="add-service-form" noValidate onSubmit={onSubmit}>
+                    <div className="input-container">
+                        <label htmlFor="name" className="form-label">Nombre del Servicio:</label>
+                        <input type="text" id="name" name="name" className='form-control' required onChange={onChangeName} value={name} />
+                        <div className='register-error'>{nameError}</div>
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="description" className="form-label">Descripción del Servicio:</label>
+                        <textarea id="description" name="description" className='form-control' required onChange={onChangeDescription} value={description}></textarea>
+                        <div className='register-error'>{descriptionError}</div>
+                    </div>
+                    <div className="input-container">
+                        <label htmlFor="minPrice" className="form-label m-0">Precio Mínimo:</label>
+                        <input type="number" min="0" id="minPrice" name="minPrice" className='form-control' required onChange={onChangeMinPrice} value={minPrice} />
+                        <div className='register-error'>{minPriceError}</div>
+                    </div>
+                    <fieldset className="categories-buttons-container" id="radios">
+                        <legend className="categories-legend">Categoría:</legend>
+                        <div className="categories-options">
+                            {categoriesOptions.map((category) => (
+                            <div className="option" key={category._id}>
+                                <input type="radio" id={`category${category.name}`} name="categories" value={category.name} className="form-check-input" required onChange={onChangeCategories} />
+                                <label htmlFor={`category${category.name}`} className="form-check-label">{category.name}</label>
+                            </div>
+                            ))}
                         </div>
-                        <div className="mb-3">
-                            <label htmlFor="description" className="form-label">Descripción del Servicio:</label>
-                            <textarea id="description" name="description" className='form-control' required onChange={onChangeDescription} value={description}></textarea>
-                            <div className='register-error'>{descriptionError}</div>
-                        </div>
-                        <div className="mb-3">
-                            <label htmlFor="minPrice" className="form-label m-0">Precio Mínimo:</label>
-                            <input type="number" min="0" id="minPrice" name="minPrice" className='form-control' required onChange={onChangeMinPrice} value={minPrice} />
-                            <div className='register-error'>{minPriceError}</div>
-                        </div>
-                        <fieldset className="mb-3" id="radios">
-                            <legend className="text-center">Categoría:</legend>
-                            <div className="d-flex justify-content-center">
+                        {selectedCategory ? (
+                        <div>
+                            <div>
+                                <legend className="categories-legend">Materiales:</legend>
                                 {categoriesOptions.map((category) => (
-                                <div className="mx-3" key={category._id}>
-                                    <div className="form-check">
-                                    <input type="radio" id={`category${category.name}`} name="categories" value={category.name} className="form-check-input" required onChange={onChangeCategories} />
-                                    <label htmlFor={`category${category.name}`} className="form-check-label">{category.name}</label>
+                                <div className="subcategories-options" key={category._id}>
+                                    {selectedCategory === category.name && category.type.map((type) => (
+                                    <div className="option" key={type}>
+                                    <input type="checkbox" id={`subcategory${type}`} name={type} className="form-check-input" value={type} onChange={onChangeSubcategories} />
+                                    <label htmlFor={`subcategory${type}`} className="form-check-label">{type}</label>
                                     </div>
-                                </div>
                                 ))}
+                                </div>
+                            ))}
                             </div>
-                            {selectedCategory ? (
-                            <div className="justify-content-center">
-                                <div>
-                                    <legend className="text-center">Materiales:</legend>
-                                    {categoriesOptions.map((category) => (
-                                    <div className="d-flex justify-content-center" key={category._id}>
-                                        {selectedCategory === category.name && category.type.map((type) => (
-                                        <div className="form-check" key={type}>
-                                        <input type="checkbox" id={`subcategory${type}`} name={type} className="form-check-input" value={type} onChange={onChangeSubcategories} />
-                                        <label htmlFor={`subcategory${type}`} className="form-check-label">{type}</label>
-                                        </div>
-                                    ))}
-                                    </div>
-                                ))}
-                                </div>
 
-                                <div>
-                                    <legend className="text-center">Estilos:</legend>
-                                    {categoriesOptions.map((category) => (
-                                    <div className="d-flex justify-content-center" key={category._id}>
-                                        {selectedCategory === category.name && category.style.map((style) => (
-                                        <div className="form-check" key={style}>
-                                            <input type="checkbox" id={`subcategory${style}`} name={style} className="form-check-input" value={style} onChange={onChangeSubcategories} />
-                                            <label htmlFor={`subcategory${style}`}  className="form-check-label">{style}</label>
-                                        </div>
-                                    ))}
+                            <div>
+                                <legend className="categories-legend">Estilos:</legend>
+                                {categoriesOptions.map((category) => (
+                                <div className="subcategories-options" key={category._id}>
+                                    {selectedCategory === category.name && category.style.map((style) => (
+                                    <div className="option" key={style}>
+                                        <input type="checkbox" id={`subcategory${style}`} name={style} className="form-check-input" value={style} onChange={onChangeSubcategories} />
+                                        <label htmlFor={`subcategory${style}`}  className="form-check-label">{style}</label>
                                     </div>
                                 ))}
                                 </div>
+                            ))}
                             </div>
-                            ) : null}
-                            <div className="register-error text-center">{categoriesError}</div>
-                        </fieldset>
+                        </div>
+                        ) : null}
+                        <div className="register-error text-center">{categoriesError}</div>
+                    </fieldset>
 
-                        <div className='register-error text-center mb-3'>{error}</div>
-                        <button type="submit" className="register-button align-self-center w-50" id="register-button">Crear Servicio</button>
-                    </form>
-                </div> 
+                    <div className='register-error text-center mb-3'>{error}</div>
+                    <button type="submit" className="register-button align-self-center w-50" id="register-button">Crear Servicio</button>
+                </form>
             </main>
 
             <Footer/>

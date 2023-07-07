@@ -179,7 +179,7 @@ function SignupPage(){
                         <div className='register-error'>{passwordCheckError}</div>
                     </div>
                     <fieldset className="role-input-container" id="radios">
-                        <legend className="text-center">¿Quieres ofrecer tus servicios?</legend>
+                        <legend className="text-center">¿Querés ofrecer tus servicios?</legend>
                         <div className="role-options">
                             <div>
                                 <input type="radio" id="userArtist" name="role" value="artist" className="form-check-input" required onChange={onChangeRole}/>
@@ -193,7 +193,7 @@ function SignupPage(){
                         <div className='register-error text-center'>{roleError}</div>
                     </fieldset>
                     <div className='register-error text-center mb-3'>{error}</div>
-                    <button type="submit" className="register-button align-self-center w-50" id="register-button">Crear Cuenta</button>
+                    <button type="submit" className="register-button" id="register-button">Crear Cuenta</button>
                 </form>
             </main>
             <Footer/>

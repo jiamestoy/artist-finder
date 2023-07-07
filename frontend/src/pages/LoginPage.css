@@ -21,33 +21,35 @@
     margin-top: 1rem;
 }
 
-.input-container input {
+.input-container input,
+.input-container textarea {
     border: 1px solid #e96724;
     border-radius: 1rem;
     height: 30px;
     margin-top: 0.5rem;
 }
 
-.forgot-password {
+.forgot-password-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.forgot-password-link {
     color:#e96724;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
 }
 
 .login-button{
     text-align: center;
-    vertical-align: middle;
     padding: 0.5rem;
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: #e96724;
     color: #fff;
     border: 2px solid #e96724;
-}
-
-.login-button:hover {
-    background-color: #fff;
-    color: #2d2d2d;
-    border: 2px solid #e96724;
+    display: block;
+    margin: auto;
 }
 
 .login-error{

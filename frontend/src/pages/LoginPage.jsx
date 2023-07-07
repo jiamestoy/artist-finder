@@ -89,7 +89,9 @@ function LoginPage(){
                             <input type="password" id="password" name="password" className="form-control" required onChange={onChangePassword} value={password}/>
                         <div className="login-error">{passwordError}</div>
                         </div>
-                        <a className="forgot-password" href="#">¿Olvidaste tu contraseña?</a>
+                        <div className="forgot-password-container">
+                            <a className="forgot-password-link" href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
                         <p className='login-error'>{error}</p>
                         <button type="submit" className="login-button align-self-center w-50" id="login-button">Iniciar Sesión</button>
                     </form>

@@ -88,11 +88,11 @@ function SearchArtistsAndServices({ list, listServices }){
         <h2>Filtrar</h2>
         <input
           id="filtro"
-          className="artist-list__filter form-control"
+          className="search-filter-input"
           type="text"
           onChange={onChangeFilter}
         />
-        <fieldset className="mb-3">
+        <fieldset className="categories-filter">
           <legend className="text">Categorías</legend>
           <div>
             {categories.map((category) => (
@@ -132,12 +132,12 @@ function SearchArtistsAndServices({ list, listServices }){
       </form>
       <div className="search-results">
 
-      <div>
+      <div className="search-artist-services-buttons">
         <button autoFocus className={`artists-button ${showArtists ? 'active' : ''}`} onClick={handleShowArtists}>
-          Buscar Artistas
+          Artistas
         </button>
         <button className={`services-button ${!showArtists ? 'active' : ''}`} onClick={handleShowServices}>
-          Buscar Servicios
+          Servicios
         </button>
       </div>
 

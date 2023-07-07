@@ -1,5 +1,5 @@
 .search-page-container {
-    width: 1200px;
+    width: 1300px;
     margin: auto;
     display: flex;
     align-self: flex-start;
@@ -13,6 +13,13 @@
     margin: 1rem;
 }
 
+.search-filter-input {
+    border: 1px solid #e96724;
+    border-radius: 1rem;
+    height: 30px;
+    margin-top: 0.5rem;
+}
+
 .search-results {
     width: 850px
 }
@@ -24,13 +31,20 @@
     background-color: white;
 }
 
+.search-artist-services-buttons {
+    margin: 2rem;
+}
 
 .artists-button {
     border-radius: 2rem 0 0 2rem;
+    width: 150px;
+    font-size: large;
 }
 
 .services-button {
     border-radius: 0 2rem 2rem 0;
+    width: 150px;
+    font-size: large;
 }
 
 .artists-button:focus,
@@ -43,4 +57,14 @@
 .search-result-list {
     display: flex;
     flex-wrap: wrap;
+}
+
+.categories-filter {
+    border: none;
+    padding-left: 0;
+}
+
+.categories-filter legend {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }

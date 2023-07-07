@@ -16,11 +16,15 @@
 .role-input-container {
     border: none;
     margin: 1rem auto 1rem auto;
+    display: flex;
+    justify-content: center;
 }
 
 .role-input-container legend {
     color:#e96724;
     font-weight: bold;
+    display: block;
+    margin: auto;
 }
 
 .role-options {
@@ -28,20 +32,19 @@
     margin-top: 1rem;
 }
 
+.role-options div {
+    margin-left: 1rem;
+}
+
 .register-button{
     text-align: center;
-    vertical-align: middle;
     padding: 0.5rem;
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: #e96724;
     color: #fff;
     border: 2px solid #e96724;
-}
-
-.register-button:hover {
-    background-color: #fff;
-    color: #2d2d2d;
-    border: 2px solid #e96724;
+    display: block;
+    margin: auto;
 }
 
 .register-error{
