@@ -31,6 +31,11 @@ async function createUser(user){
 
     newUser.password = await bcrypt.hash(user.password, salt);
 
+    const date = new Date();
+    const formattedDate = new Intl.DateTimeFormat('en-GB').format(date);
+
+    newUser.member_since = formattedDate;
+
     await db.collection('users').insertOne(newUser);
 }
 
