@@ -20,6 +20,15 @@
     border-radius: 1rem;
     height: 455px;
     width: 350px;
+    padding: 1rem 0;
+}
+
+.avatar-name-container h1{
+    margin: 0;
+}
+
+.username {
+    margin: 0;
 }
 
 .profile-avatar {
@@ -40,11 +49,13 @@
 
 .contact-button {
     text-decoration: none;
+    font-weight: 500;
     color: white;
     background-color: #E96724;
     border: 3px solid #E96724;
-    padding: 0.5rem;
+    padding: 0.5rem 3rem;
     border-radius: 2rem;
+    margin-top: 1rem;
 }
 
 .artist-details {
@@ -73,8 +84,17 @@
 }
 
 .additional-containers {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: white;
     border-radius: 1rem;
     width: 632px;
+    color: #1E3351;
+}
+
+h2, h3{
+    color: #1E3351;
+}
+
+li strong{
+    color: #1E3351;
 }

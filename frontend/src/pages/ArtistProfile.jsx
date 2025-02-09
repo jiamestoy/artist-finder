@@ -37,7 +37,7 @@ function ArtistProfile(){
                         <div className="avatar-name-container">
                             <img className="profile-avatar" src={`/imgs/avatars/${artist.avatar ? artist.avatar : 'avatar_placeholder.png'}`} alt={`Avatar de ${artist.username}`} />
                             <h1>{(artist.first_name || artist.last_name) != null ? artist.first_name + ' ' + artist.last_name : artist.username}</h1>
-                            <p>@{artist.username}</p>
+                            <p className="username">@{artist.username}</p>
                             <p>Categorias: {artist.categories? artist.categories.join(", ") : 'Sin categorías'}</p>
                             <a className="rating" href="#reviews">Calificaciones: {isNaN(averageScore) ? 'Sin calificaciones' : `${averageScore} \u2605`} </a> 
                             <a href="#" className="contact-button">Contactar</a>
@@ -46,7 +46,7 @@ function ArtistProfile(){
                         <div className="artist-details">
                             <div className="description">
                                 <h2>Descripción</h2>
-                                <p>{artist.description ? artist.description : 'Sin descripción'}</p>
+                                <p>{artist.description ? artist.description : 'Sin descripción.'}</p>
                             </div>
                             <div>
                                 <ul>
@@ -54,7 +54,7 @@ function ArtistProfile(){
                                     <li className="space-between"><span>Miembro desde</span> <strong>{artist.member_since ? artist.member_since : 'Sin datos'}</strong></li>
                                 </ul>
                                 <h3>Idiomas</h3>
-                                <p>{artist.languages? artist.languages.join(", ") : 'Sin idiomas'}</p>
+                                <p>{artist.languages? artist.languages.join(", ") : 'Sin idiomas.'}</p>
                                 <h3>Educación</h3>
                                 <div>
                                     {artist.education ? artist.education.map(degree => <UserDegree key={degree} degree={degree}/>) : <p>Sin títulos.</p>}
